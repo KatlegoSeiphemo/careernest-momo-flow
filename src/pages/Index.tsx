@@ -103,7 +103,7 @@ const Index = () => {
             </div>
             <div className="flex items-center gap-4">
               <span className="momo-badge">MoMo Integrated</span>
-              <Button className="hero-button">
+              <Button className="hero-button" onClick={() => window.location.href = '/signup'}>
                 Get Started <ChevronRight className="h-4 w-4 ml-2" />
               </Button>
             </div>
@@ -133,7 +133,7 @@ const Index = () => {
               From micro-subscriptions to instant payments, CareerNest uses Mobile Money to make career growth accessible for everyone.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button className="hero-button text-lg px-8 py-4">
+              <Button className="hero-button text-lg px-8 py-4" onClick={() => window.location.href = '/signup'}>
                 Start Your Journey
                 <Zap className="h-5 w-5 ml-2" />
               </Button>
@@ -199,7 +199,7 @@ const Index = () => {
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
             Join thousands of African professionals already growing their careers with CareerNest's MoMo-powered platform.
           </p>
-          <Button className="hero-button text-lg px-8 py-4 animate-pulse-glow">
+          <Button className="hero-button text-lg px-8 py-4 animate-pulse-glow" onClick={() => window.location.href = '/signup'}>
             Launch Your Career Journey
             <ChevronRight className="h-5 w-5 ml-2" />
           </Button>
