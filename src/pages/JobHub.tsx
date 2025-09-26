@@ -750,6 +750,75 @@ const JobHub = () => {
             </div>
           </CardContent>
         </Card>
+        {/* Practice Interviews Section */}
+<div className="mt-12">
+  <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
+    Practice Interviews
+  </h2>
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+    {/* Interview Card */}
+    <Card className="hover:shadow-lg transition-all duration-300 border-l-4 border-l-primary/20">
+      <CardContent className="p-6">
+        <h3 className="text-xl font-bold mb-2">Software Developer Interview</h3>
+        <p className="text-gray-600 mb-4">
+          Practice technical and behavioral questions for junior software developer roles.
+        </p>
+        <div className="flex items-center justify-between mb-4 text-sm text-gray-500">
+          <span>Difficulty: Medium</span>
+          <span>Duration: 30 mins</span>
+        </div>
+        <Button 
+          size="sm" 
+          className="bg-career-gradient w-full hover:opacity-90"
+          onClick={() => navigate("/practice/software-developer")}
+        >
+          Start Practice
+        </Button>
+      </CardContent>
+    </Card>
+
+    <Card className="hover:shadow-lg transition-all duration-300 border-l-4 border-l-primary/20">
+      <CardContent className="p-6">
+        <h3 className="text-xl font-bold mb-2">Data Analyst Interview</h3>
+        <p className="text-gray-600 mb-4">
+          Prepare for data analysis roles with SQL, Python, and case study questions.
+        </p>
+        <div className="flex items-center justify-between mb-4 text-sm text-gray-500">
+          <span>Difficulty: Hard</span>
+          <span>Duration: 45 mins</span>
+        </div>
+        <Button 
+          size="sm" 
+          className="bg-career-gradient w-full hover:opacity-90"
+          onClick={() => navigate("/practice/data-analyst")}
+        >
+          Start Practice
+        </Button>
+      </CardContent>
+    </Card>
+
+    <Card className="hover:shadow-lg transition-all duration-300 border-l-4 border-l-primary/20">
+      <CardContent className="p-6">
+        <h3 className="text-xl font-bold mb-2">UX Designer Interview</h3>
+        <p className="text-gray-600 mb-4">
+          Practice portfolio walkthroughs and UX problem-solving scenarios.
+        </p>
+        <div className="flex items-center justify-between mb-4 text-sm text-gray-500">
+          <span>Difficulty: Medium</span>
+          <span>Duration: 40 mins</span>
+        </div>
+        <Button 
+          size="sm" 
+          className="bg-career-gradient w-full hover:opacity-90"
+          onClick={() => navigate("/practice/ux-designer")}
+        >
+          Start Practice
+        </Button>
+      </CardContent>
+    </Card>
+  </div>
+</div>
+
       </main>
     </div>
   );
