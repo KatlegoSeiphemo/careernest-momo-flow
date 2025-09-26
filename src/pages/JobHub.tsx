@@ -718,38 +718,7 @@ const JobHub = () => {
           ))}
         </div>
 
-        {/* Load More */}
-        <div className="text-center mt-8">
-          <Button size="lg" variant="outline">
-            Load More Jobs
-          </Button>
-        </div>
-
-        {/* CTA Section */}
-        <Card className="bg-career-gradient text-white mt-12">
-          <CardContent className="p-8 text-center">
-            <h3 className="text-2xl font-bold mb-4">Not Finding the Right Fit?</h3>
-            <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-              Set up job alerts and let opportunities come to you. Our AI will notify you 
-              when jobs matching your criteria are posted.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                size="lg" 
-                variant="secondary"
-              >
-                Set Job Alerts
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline"
-                className="border-white text-white hover:bg-white hover:text-primary"
-              >
-                Improve Your CV
-              </Button>
-            </div>
-          </CardContent>
-        </Card>
+    
         {/* Practice Interviews Section */}
 <div className="mt-12">
   <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
