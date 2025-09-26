@@ -98,7 +98,7 @@ const Index = () => {
               </div>
               <div>
                 <h1 className="text-xl font-bold text-foreground">CareerNest</h1>
-                <p className="text-xs text-muted-foreground">MoMo-Powered Career Platform</p>
+                <p className="text-xs text-muted-foreground">Nest Your Ambitions, Grow Your Career</p>
               </div>
             </div>
             <div className="flex items-center gap-4">
@@ -122,13 +122,10 @@ const Index = () => {
           <div className="max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Unlocking potential for smooth career journeys
-              <span className="block bg-gradient-to-r from-golden-yellow to-white bg-clip-text text-transparent">
-                MoMo Integration
-              </span>
-            </h1>
+      
+           </h1>
             <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto">
-              From micro-subscriptions to instant payments, CareerNest uses Mobile Money to make career growth accessible for everyone.
-            </p>
+            CareerNest is a career development platform that helps students and early-career professionals discover, plan, and grow in their chosen fields  </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button className="hero-button text-lg px-8 py-4" onClick={() => window.location.href = '/signup'}>
                 Start Your Journey today!
@@ -144,9 +141,9 @@ const Index = () => {
       <section className="py-12 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <StatsCard value="15K+" label="Active Learners" change="12% this month" />
+            <StatsCard value="150K+" label="Active Users" change="12% this month" />
             <StatsCard value="500+" label="Expert Mentors" change="8% this month" />
-            <StatsCard value="R2.3M" label="Paid to Learners" change="25% this month" />
+            <StatsCard value="100+" label="Communities" change="25% this month" />
             <StatsCard value="98%" label=" Success Rate" change="2% improvement" />
           </div>
         </div>
