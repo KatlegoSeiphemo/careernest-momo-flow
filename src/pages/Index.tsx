@@ -97,8 +97,13 @@ const Index = () => {
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-hero opacity-90"></div>
         <div className="absolute inset-0">
-         <img src="https://drive.google.com/uc?export=view&id=1NY4P3fpgeaZ5JhLO2bb5PgflBv0gGehi" alt="My Image">
 
+
+
+
+
+
+          
         </div>
         <div className="relative container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
