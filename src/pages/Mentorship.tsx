@@ -266,6 +266,60 @@ const Mentorship = () => {
             ))}
           </div>
         </div>
+// Add this at the bottom of your <main> before </main>
+<div className="mt-16 mb-12">
+  <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Book a Mentor</h3>
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    {mentors.map((mentor) => (
+      <Card key={mentor.id} className="hover:shadow-xl transition-all duration-300 border-2 hover:border-primary/20">
+        <CardHeader className="text-center">
+          <Avatar className="w-20 h-20 mx-auto mb-4">
+            <AvatarImage src={mentor.avatar} alt={mentor.name} />
+            <AvatarFallback className="text-xl bg-career-gradient text-white">
+              {mentor.name.split(' ').map(n => n[0]).join('')}
+            </AvatarFallback>
+          </Avatar>
+          <CardTitle className="text-lg">{mentor.name}</CardTitle>
+          <CardDescription>
+            <div className="space-y-1">
+              <p className="font-medium">{mentor.title}</p>
+              <div className="flex items-center justify-center space-x-1">
+                <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                <span className="text-sm font-medium">{mentor.rating}</span>
+                <span className="text-sm text-gray-500">({mentor.sessions} sessions)</span>
+              </div>
+            </div>
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <div className="space-y-3">
+            <div className="flex items-center justify-between text-sm">
+              <span className="text-gray-500">Experience</span>
+              <span className="font-medium">{mentor.experience}</span>
+            </div>
+            <div className="flex items-center justify-between text-sm">
+              <span className="text-gray-500">Rate</span>
+              <span className="font-semibold text-career-green">{mentor.price}</span>
+            </div>
+            <div className="flex flex-wrap gap-1 mb-3">
+              {mentor.specialties.map((specialty, index) => (
+                <Badge key={index} variant="outline" className="text-xs">{specialty}</Badge>
+              ))}
+            </div>
+            <div className="flex flex-col space-y-2">
+              <Button size="sm" className="w-full bg-career-gradient flex items-center justify-center">
+                <MessageCircle className="w-4 h-4 mr-1" /> Message Mentor
+              </Button>
+              <Button size="sm" variant="outline" className="w-full flex items-center justify-center" onClick={() => alert(`Booking session with ${mentor.name}`)}>
+                <Video className="w-4 h-4 mr-1" /> Book Session
+              </Button>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+    ))}
+  </div>
+</div>
 
        
      
