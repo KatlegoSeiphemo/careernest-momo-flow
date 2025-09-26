@@ -98,7 +98,7 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-hero opacity-90"></div>
         <div className="absolute inset-0">
           <img
-            src=""
+            src="https://9d2480a8-d4de-4138-abcf-31ba6cd585e9.lovableproject.com/src/assets/hero-image.jpg"
             className="w-full h-full object-cover"
             alt="CareerNest Hero"
           />
