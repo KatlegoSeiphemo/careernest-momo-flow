@@ -102,10 +102,7 @@ const Index = () => {
               </div>
             </div>
             <div className="flex items-center gap-4">
-              <span className="momo-badge">MoMo Integrated</span>
-              <Button className="hero-button" onClick={() => window.location.href = '/signup'}>
-                Get Started <ChevronRight className="h-4 w-4 ml-2" />
-              </Button>
+             
             </div>
           </div>
         </div>
@@ -116,7 +113,7 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-hero opacity-90"></div>
         <div className="absolute inset-0">
           <img 
-            src={heroImage} 
+            src="https://www.bing.com/th/id/OIP.NhP769QnkSP1QU17ox6gsgHaE8?w=273&h=211&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" 
             alt="African professionals using CareerNest platform"
             className="w-full h-full object-cover"
           />
