@@ -14,10 +14,8 @@ import {
   Zap
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
 import FeatureCard from "@/components/FeatureCard";
 import StatsCard from "@/components/StatsCard";
-import heroImage from "@/assets/career-hero.jpg";
 
 const Index = () => {
   const features = [
@@ -25,62 +23,54 @@ const Index = () => {
       icon: CreditCard,
       title: "Subscription Payments",
       description: "Students subscribe to Career Growth Bundles with affordable monthly plans",
-     
       pricing: "Starting from R50/month"
     },
     {
       icon: Users,
       title: "Split Payments",
       description: "Instant commission distribution between students, CareerNest, and mentors",
-    
       pricing: "Transparent 10% platform fee"
     },
     {
       icon: Heart,
       title: "Scholarship Crowdfunding",
       description: "Community-powered funding for learners' educational goals",
-   
       pricing: "0% fees on donations"
     },
     {
       icon: Briefcase,
       title: "Job Application Services",
       description: "CV scoring, psychometric tests, and mock interviews",
-     
       pricing: "R15-50 per service"
     },
     {
       icon: GraduationCap,
       title: "Pay-As-You-Learn",
       description: "Unlock lessons progressively without large upfront costs",
- 
       pricing: "R10-25 per lesson"
     },
     {
       icon: Wallet,
       title: "Employer Payments",
       description: "Streamlined recruitment fee processing and candidate rewards",
- 
       pricing: "Custom enterprise rates"
     },
     {
       icon: Target,
       title: "Savings & Goals",
       description: "Gamified savings system for educational investments",
-     
       pricing: "Free goal tracking"
     },
     {
       icon: Gift,
       title: "Referral Rewards",
       description: "Instant cash rewards for successful referrals",
-
       pricing: "R25-100 per referral"
     },
     {
       icon: Shield,
       title: "Identity Verification",
-   
+      description: "Secure verification process to protect user identities"
     }
   ];
 
@@ -99,9 +89,6 @@ const Index = () => {
                 <p className="text-xs text-muted-foreground">Nest Your Ambitions, Grow Your Career</p>
               </div>
             </div>
-            <div className="flex items-center gap-4">
-             
-            </div>
           </div>
         </div>
       </header>
@@ -111,7 +98,8 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-hero opacity-90"></div>
         <div className="absolute inset-0">
           <img 
-            src= "https://sdmntprnorthcentralus.oaiusercontent.com/files/00000000-6d78-622f-82c2-048e798d5204/raw?se=2025-09-26T18%3A52%3A24Z&sp=r&sv=2024-08-04&sr=b&scid=b08b1409-90c2-5b49-abcf-26b344a137da&skoid=e9d2f8b1-028a-4cff-8eb1-d0e66fbefcca&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-09-26T17%3A19%3A31Z&ske=2025-09-27T17%3A19%3A31Z&sks=b&skv=2024-08-04&sig=yorG0bJxu5Y2O8DrkEx5HUN1HkInBNN9%2BGfvUwI8Q%2BI%3D"   alt="African professionals using CareerNest platform"
+            src="https://sdmntprnorthcentralus.oaiusercontent.com/files/00000000-6d78-622f-82c2-048e798d5204/raw?se=2025-09-26T18%3A52%3A24Z&sp=r&sv=2024-08-04&sr=b&scid=b08b1409-90c2-5b49-abcf-26b344a137da&skoid=e9d2f8b1-028a-4cff-8eb1-d0e66fbefcca&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-09-26T17%3A19%3A31Z&ske=2025-09-27T17%3A19%3A31Z&sks=b&skv=2024-08-04&sig=yorG0bJxu5Y2O8DrkEx5HUN1HkInBNN9%2BGfvUwI8Q%2BI%3D"   
+            alt="African professionals using CareerNest platform"
             className="w-full h-full object-cover"
           />
         </div>
@@ -119,16 +107,15 @@ const Index = () => {
           <div className="max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Unlocking potential for smooth career journeys
-      
-           </h1>
+            </h1>
             <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto">
-            CareerNest is a career development platform that helps students and early-career professionals discover, plan, and grow in their chosen fields  </p>
+              CareerNest is a career development platform that helps students and early-career professionals discover, plan, and grow in their chosen fields
+            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button className="hero-button text-lg px-8 py-4" onClick={() => window.location.href = '/signup'}>
                 Start Your Journey today!
                 <Zap className="h-5 w-5 ml-2" />
               </Button>
-             
             </div>
           </div>
         </div>
@@ -169,7 +156,6 @@ const Index = () => {
                 icon={feature.icon}
                 title={feature.title}
                 description={feature.description}
-                momoFeature={feature.momoFeature}
                 pricing={feature.pricing}
                 className="animate-float"
               />
@@ -212,7 +198,6 @@ const Index = () => {
             <span>•</span>
             <span>Terms of Service</span>
             <span>•</span>
-          
           </div>
         </div>
       </footer>
