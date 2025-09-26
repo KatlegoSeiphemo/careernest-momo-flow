@@ -124,7 +124,7 @@ const Index = () => {
         <div className="relative container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Empowering African Careers with
+              Unlocking potential for smooth career journeys
               <span className="block bg-gradient-to-r from-golden-yellow to-white bg-clip-text text-transparent">
                 MoMo Integration
               </span>
@@ -134,7 +134,7 @@ const Index = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button className="hero-button text-lg px-8 py-4" onClick={() => window.location.href = '/signup'}>
-                Start Your Journey
+                Start Your Journey today!
                 <Zap className="h-5 w-5 ml-2" />
               </Button>
              
