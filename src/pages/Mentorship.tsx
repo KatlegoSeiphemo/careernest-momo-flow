@@ -21,77 +21,76 @@ import {
 const Mentorship = () => {
   const navigate = useNavigate();
 
-const mentors = [
-  {
-    id: 1,
-    name: "Sarah Chen",
-    title: "Senior Software Engineer",
-    company: "Google",
-    location: "Cape Town, SA",
-    rating: 4.9,
-    sessions: 127,
-    experience: "8 years",
-    specialties: ["React", "System Design", "Career Growth", "Interview Prep"],
-    price: "R450/hour",
-    avatar: "https://randomuser.me/api/portraits/women/44.jpg",
-    bio: "Former startup founder turned big tech engineer. I help developers level up their careers and master technical interviews.",
-    languages: ["English", "Mandarin"],
-    availability: "Weekends",
-    responseTime: "< 2 hours"
-  },
-  {
-    id: 2,
-    name: "Thabo Mthembu",
-    title: "Marketing Director",
-    company: "Takealot",
-    location: "Johannesburg, SA",
-    rating: 4.8,
-    sessions: 89,
-    experience: "12 years",
-    specialties: ["Digital Marketing", "Brand Strategy", "E-commerce", "Team Leadership"],
-    price: "R380/hour",
-    avatar: "https://randomuser.me/api/portraits/men/22.jpg",
-    bio: "Built marketing teams from scratch and launched successful campaigns for major SA brands. Passionate about mentoring young marketers.",
-    languages: ["English", "Zulu", "Afrikaans"],
-    availability: "Evenings",
-    responseTime: "< 4 hours"
-  },
-  {
-    id: 3,
-    name: "Dr. Amina Hassan",
-    title: "Data Science Lead",
-    company: "Standard Bank",
-    location: "Remote",
-    rating: 5.0,
-    sessions: 156,
-    experience: "10 years",
-    specialties: ["Machine Learning", "Financial Analytics", "Python", "Career Transition"],
-    price: "R520/hour",
-    avatar: "https://randomuser.me/api/portraits/women/65.jpg",
-    bio: "PhD in Statistics, helped 50+ professionals transition into data science. Expert in breaking down complex concepts.",
-    languages: ["English", "Arabic"],
-    availability: "Flexible",
-    responseTime: "< 1 hour"
-  },
-  {
-    id: 4,
-    name: "James Wilson",
-    title: "UX Design Manager",
-    company: "Naspers",
-    location: "Cape Town, SA",
-    rating: 4.7,
-    sessions: 73,
-    experience: "7 years",
-    specialties: ["User Research", "Design Systems", "Portfolio Review", "Figma"],
-    price: "R420/hour",
-    avatar: "https://randomuser.me/api/portraits/men/33.jpg",
-    bio: "Self-taught designer who worked way up to managing design teams. Love helping others build strong design portfolios.",
-    languages: ["English"],
-    availability: "Mornings",
-    responseTime: "< 3 hours"
-  }
-];
-
+  const mentors = [
+    {
+      id: 1,
+      name: "Sarah Chen",
+      title: "Senior Software Engineer",
+      company: "Google",
+      location: "Cape Town, SA",
+      rating: 4.9,
+      sessions: 127,
+      experience: "8 years",
+      specialties: ["React", "System Design", "Career Growth", "Interview Prep"],
+      price: "R450/hour",
+      avatar: "https://randomuser.me/api/portraits/women/44.jpg",
+      bio: "Former startup founder turned big tech engineer. I help developers level up their careers and master technical interviews.",
+      languages: ["English", "Mandarin"],
+      availability: "Weekends",
+      responseTime: "< 2 hours"
+    },
+    {
+      id: 2,
+      name: "Thabo Mthembu",
+      title: "Marketing Director",
+      company: "Takealot",
+      location: "Johannesburg, SA",
+      rating: 4.8,
+      sessions: 89,
+      experience: "12 years",
+      specialties: ["Digital Marketing", "Brand Strategy", "E-commerce", "Team Leadership"],
+      price: "R380/hour",
+      avatar: "https://randomuser.me/api/portraits/men/22.jpg",
+      bio: "Built marketing teams from scratch and launched successful campaigns for major SA brands. Passionate about mentoring young marketers.",
+      languages: ["English", "Zulu", "Afrikaans"],
+      availability: "Evenings",
+      responseTime: "< 4 hours"
+    },
+    {
+      id: 3,
+      name: "Dr. Amina Hassan",
+      title: "Data Science Lead",
+      company: "Standard Bank",
+      location: "Remote",
+      rating: 5.0,
+      sessions: 156,
+      experience: "10 years",
+      specialties: ["Machine Learning", "Financial Analytics", "Python", "Career Transition"],
+      price: "R520/hour",
+      avatar: "https://randomuser.me/api/portraits/women/65.jpg",
+      bio: "PhD in Statistics, helped 50+ professionals transition into data science. Expert in breaking down complex concepts.",
+      languages: ["English", "Arabic"],
+      availability: "Flexible",
+      responseTime: "< 1 hour"
+    },
+    {
+      id: 4,
+      name: "James Wilson",
+      title: "UX Design Manager",
+      company: "Naspers",
+      location: "Cape Town, SA",
+      rating: 4.7,
+      sessions: 73,
+      experience: "7 years",
+      specialties: ["User Research", "Design Systems", "Portfolio Review", "Figma"],
+      price: "R420/hour",
+      avatar: "https://randomuser.me/api/portraits/men/33.jpg",
+      bio: "Self-taught designer who worked way up to managing design teams. Love helping others build strong design portfolios.",
+      languages: ["English"],
+      availability: "Mornings",
+      responseTime: "< 3 hours"
+    }
+  ];
 
   const mentorshipPrograms = [
     {
@@ -170,7 +169,49 @@ const mentors = [
 
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        
+
+        {/* How Mentorship Works - FIRST SECTION */}
+        <Card className="mb-12">
+          <CardHeader>
+            <CardTitle className="text-2xl text-center">How Mentorship Works</CardTitle>
+            <CardDescription className="text-center text-lg">
+              Simple steps to accelerate your career growth
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-career-blue rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Users className="w-8 h-8 text-white" />
+                </div>
+                <h4 className="font-semibold mb-2">1. Find Your Mentor</h4>
+                <p className="text-sm text-gray-600">Browse profiles and find mentors who match your career goals and interests.</p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-career-green rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Calendar className="w-8 h-8 text-white" />
+                </div>
+                <h4 className="font-semibold mb-2">2. Schedule Sessions</h4>
+                <p className="text-sm text-gray-600">Book flexible sessions that fit your schedule and learning preferences.</p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-career-purple rounded-full flex items-center justify-center mx-auto mb-4">
+                  <MessageCircle className="w-8 h-8 text-white" />
+                </div>
+                <h4 className="font-semibold mb-2">3. Learn & Grow</h4>
+                <p className="text-sm text-gray-600">Get personalized guidance, feedback, and industry insights from experts.</p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-career-orange rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Award className="w-8 h-8 text-white" />
+                </div>
+                <h4 className="font-semibold mb-2">4. Achieve Goals</h4>
+                <p className="text-sm text-gray-600">Land your dream job, get promoted, or successfully transition careers.</p>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
         {/* Hero Section */}
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -298,48 +339,6 @@ const mentors = [
           </div>
         </div>
 
-        {/* How It Works */}
-        <Card className="mb-8">
-          <CardHeader>
-            <CardTitle className="text-2xl text-center">How Mentorship Works</CardTitle>
-            <CardDescription className="text-center text-lg">
-              Simple steps to accelerate your career growth
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-career-blue rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users className="w-8 h-8 text-white" />
-                </div>
-                <h4 className="font-semibold mb-2">1. Find Your Mentor</h4>
-                <p className="text-sm text-gray-600">Browse profiles and find mentors who match your career goals and interests.</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-career-green rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Calendar className="w-8 h-8 text-white" />
-                </div>
-                <h4 className="font-semibold mb-2">2. Schedule Sessions</h4>
-                <p className="text-sm text-gray-600">Book flexible sessions that fit your schedule and learning preferences.</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-career-purple rounded-full flex items-center justify-center mx-auto mb-4">
-                  <MessageCircle className="w-8 h-8 text-white" />
-                </div>
-                <h4 className="font-semibold mb-2">3. Learn & Grow</h4>
-                <p className="text-sm text-gray-600">Get personalized guidance, feedback, and industry insights from experts.</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-career-orange rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Award className="w-8 h-8 text-white" />
-                </div>
-                <h4 className="font-semibold mb-2">4. Achieve Goals</h4>
-                <p className="text-sm text-gray-600">Land your dream job, get promoted, or successfully transition careers.</p>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-
         {/* CTA Section */}
         <Card className="bg-career-gradient text-white">
           <CardContent className="p-8 text-center">
@@ -365,6 +364,7 @@ const mentors = [
             </div>
           </CardContent>
         </Card>
+
       </main>
     </div>
   );
