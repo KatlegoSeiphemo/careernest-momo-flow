@@ -19,33 +19,35 @@ const Dashboard = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 flex scroll-smooth">
-      {/* Sidebar */}
-      <aside className="w-64 bg-white border-r shadow-md sticky top-0 h-screen hidden md:flex flex-col">
-        <div className="p-6 border-b">
-          <h2 className="text-xl font-bold text-indigo-600">Features</h2>
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 scroll-smooth">
+      {/* Header */}
+      <header className="bg-white shadow-md border-b sticky top-0 z-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-16">
+            <h1 className="text-3xl font-extrabold text-primary tracking-wide">CareerNest</h1>
+            <div className="flex items-center space-x-6">
+              {/* Features List in Header */}
+              <nav className="hidden md:flex space-x-4">
+                {features.map((feature, i) => (
+                  <a
+                    key={i}
+                    href={`#${feature.title.replace(/\s+/g, "-").toLowerCase()}`}
+                    className="text-gray-700 hover:text-indigo-600 font-medium transition-colors"
+                  >
+                    {feature.title}
+                  </a>
+                ))}
+              </nav>
+              <Button variant="outline" onClick={() => navigate("/")}>
+                <LogOut className="w-4 h-4 mr-2" /> Sign Out
+              </Button>
+            </div>
+          </div>
         </div>
-        <nav className="flex-1 overflow-y-auto p-4 space-y-3">
-          {features.map((feature, i) => (
-            <a
-              key={i}
-              href={`#${feature.title.replace(/\s+/g, "-").toLowerCase()}`}
-              className="flex items-center space-x-3 p-2 rounded-lg hover:bg-indigo-50 text-gray-700 transition-colors"
-            >
-              <feature.icon className="w-5 h-5 text-indigo-500" />
-              <span>{feature.title}</span>
-            </a>
-          ))}
-        </nav>
-        <div className="p-4 border-t">
-          <Button variant="outline" onClick={() => navigate("/")}>
-            <LogOut className="w-4 h-4 mr-2" /> Sign Out
-          </Button>
-        </div>
-      </aside>
+      </header>
 
       {/* Main Content */}
-      <main className="flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Hero Text */}
         <div className="mb-12 text-center">
           <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
@@ -101,11 +103,6 @@ const Dashboard = () => {
         </div>
       </main>
     </div>
-  );
-};
-
-export default Dashboard;
-
   );
 };
 
