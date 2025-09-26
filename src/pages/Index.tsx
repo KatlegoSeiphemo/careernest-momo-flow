@@ -25,64 +25,62 @@ const Index = () => {
       icon: CreditCard,
       title: "Subscription Payments",
       description: "Students subscribe to Career Growth Bundles with affordable monthly plans",
-      momoFeature: "MoMo auto-debits small monthly amounts for continuous learning access",
+     
       pricing: "Starting from R50/month"
     },
     {
       icon: Users,
       title: "Split Payments",
       description: "Instant commission distribution between students, CareerNest, and mentors",
-      momoFeature: "10% to CareerNest, 90% instantly to course providers via MoMo Collections",
+    
       pricing: "Transparent 10% platform fee"
     },
     {
       icon: Heart,
       title: "Scholarship Crowdfunding",
       description: "Community-powered funding for learners' educational goals",
-      momoFeature: "Direct MoMo wallet contributions with real-time progress tracking",
+   
       pricing: "0% fees on donations"
     },
     {
       icon: Briefcase,
       title: "Job Application Services",
       description: "CV scoring, psychometric tests, and mock interviews",
-      momoFeature: "Micro-MoMo payments for instant access to career services",
+     
       pricing: "R15-50 per service"
     },
     {
       icon: GraduationCap,
       title: "Pay-As-You-Learn",
       description: "Unlock lessons progressively without large upfront costs",
-      momoFeature: "MoMo micro-transactions for flexible, barrier-free learning",
+ 
       pricing: "R10-25 per lesson"
     },
     {
       icon: Wallet,
       title: "Employer Payments",
       description: "Streamlined recruitment fee processing and candidate rewards",
-      momoFeature: "Auto-disbursement to successful candidates' MoMo wallets",
+ 
       pricing: "Custom enterprise rates"
     },
     {
       icon: Target,
       title: "Savings & Goals",
       description: "Gamified savings system for educational investments",
-      momoFeature: "Integrated MoMo savings wallets with progress tracking",
+     
       pricing: "Free goal tracking"
     },
     {
       icon: Gift,
       title: "Referral Rewards",
       description: "Instant cash rewards for successful referrals",
-      momoFeature: "Immediate MoMo transfers via API disbursement",
+
       pricing: "R25-100 per referral"
     },
     {
       icon: Shield,
       title: "Identity Verification",
-      description: "Secure, trusted profiles using MoMo KYC integration",
-      momoFeature: "Streamlined sign-up with MoMo's verified identity data",
-      pricing: "Free with MoMo wallet"
+   
     }
   ];
 
