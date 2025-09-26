@@ -1,7 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
-import { MessageCircle, FileText, FileCheck, Target, LogOut, Users, Trophy, MapPin, BookOpen, Briefcase } from "lucide-react";
+import { MessageCircle, FileText, Target, LogOut, Users, Trophy, MapPin, BookOpen, Briefcase } from "lucide-react";
 
 const Dashboard = () => {
   const navigate = useNavigate();
@@ -9,7 +9,6 @@ const Dashboard = () => {
   const features = [
     { icon: MessageCircle, title: "Career Chatbot", description: "Get instant answers to your career questions", path: "/chatbot", color: "bg-blue-500" },
     { icon: FileText, title: "CV Generator", description: "Create professional CVs with AI assistance", path: "/cv-generator", color: "bg-green-500" },
-    { icon: FileCheck, title: "Cover Letter Generator", description: "Generate personalized cover letters", path: "/cover-letter", color: "bg-purple-500" },
     { icon: Target, title: "Career Assessment", description: "Discover your ideal career path", path: "/career-assessment", color: "bg-orange-500" },
     { icon: MapPin, title: "Career Pathways", description: "Explore detailed career roadmaps", path: "/career-pathways", color: "bg-gradient-to-r from-blue-400 to-indigo-600" },
     { icon: BookOpen, title: "Mentorship", description: "Connect with industry experts", path: "/mentorship", color: "bg-gradient-to-r from-purple-500 to-pink-500" },
@@ -103,6 +102,11 @@ const Dashboard = () => {
         </div>
       </main>
     </div>
+  );
+};
+
+export default Dashboard;
+
   );
 };
 
