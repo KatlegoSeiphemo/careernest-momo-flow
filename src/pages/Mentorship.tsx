@@ -21,77 +21,76 @@ import {
 const Mentorship = () => {
   const navigate = useNavigate();
 
-const mentors = [
-  {
-    id: 1,
-    name: "Sarah Chen",
-    title: "Senior Software Engineer",
-    company: "Google",
-    location: "Cape Town, SA",
-    rating: 4.9,
-    sessions: 127,
-    experience: "8 years",
-    specialties: ["React", "System Design", "Career Growth", "Interview Prep"],
-    price: "R450/hour",
-    avatar: "https://randomuser.me/api/portraits/women/44.jpg",
-    bio: "Former startup founder turned big tech engineer. I help developers level up their careers and master technical interviews.",
-    languages: ["English", "Mandarin"],
-    availability: "Weekends",
-    responseTime: "< 2 hours"
-  },
-  {
-    id: 2,
-    name: "Thabo Mthembu",
-    title: "Marketing Director",
-    company: "Takealot",
-    location: "Johannesburg, SA",
-    rating: 4.8,
-    sessions: 89,
-    experience: "12 years",
-    specialties: ["Digital Marketing", "Brand Strategy", "E-commerce", "Team Leadership"],
-    price: "R380/hour",
-    avatar: "https://randomuser.me/api/portraits/men/22.jpg",
-    bio: "Built marketing teams from scratch and launched successful campaigns for major SA brands. Passionate about mentoring young marketers.",
-    languages: ["English", "Zulu", "Afrikaans"],
-    availability: "Evenings",
-    responseTime: "< 4 hours"
-  },
-  {
-    id: 3,
-    name: "Dr. Amina Hassan",
-    title: "Data Science Lead",
-    company: "Standard Bank",
-    location: "Remote",
-    rating: 5.0,
-    sessions: 156,
-    experience: "10 years",
-    specialties: ["Machine Learning", "Financial Analytics", "Python", "Career Transition"],
-    price: "R520/hour",
-    avatar: "https://randomuser.me/api/portraits/women/65.jpg",
-    bio: "PhD in Statistics, helped 50+ professionals transition into data science. Expert in breaking down complex concepts.",
-    languages: ["English", "Arabic"],
-    availability: "Flexible",
-    responseTime: "< 1 hour"
-  },
-  {
-    id: 4,
-    name: "James Wilson",
-    title: "UX Design Manager",
-    company: "Naspers",
-    location: "Cape Town, SA",
-    rating: 4.7,
-    sessions: 73,
-    experience: "7 years",
-    specialties: ["User Research", "Design Systems", "Portfolio Review", "Figma"],
-    price: "R420/hour",
-    avatar: "https://randomuser.me/api/portraits/men/33.jpg",
-    bio: "Self-taught designer who worked way up to managing design teams. Love helping others build strong design portfolios.",
-    languages: ["English"],
-    availability: "Mornings",
-    responseTime: "< 3 hours"
-  }
-];
-
+  const mentors = [
+    {
+      id: 1,
+      name: "Sarah Chen",
+      title: "Senior Software Engineer",
+      company: "Google",
+      location: "Cape Town, SA",
+      rating: 4.9,
+      sessions: 127,
+      experience: "8 years",
+      specialties: ["React", "System Design", "Career Growth", "Interview Prep"],
+      price: "R450/hour",
+      avatar: "https://www.bing.com/images/search?view=detailV2&ccid=C9sJoWtM&id=D35DFBB4758A9F1F7DBFA36579C2475ACD7F8531&thid=OIP.C9sJoWtMZWhSXRkbKY-ErwAAAA&mediaurl=https%3a%2f%2fassets.weforum.org%2fauthor%2fimage%2fresponsive_small_qQ1CZFILHtZWcVOc4EX3uZ7K3Y7lrzOw4ypY3l-lYZg.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.0bdb09a16b4c6568525d191b298f84af%3frik%3dMYV%252fzVpHwnllow%26pid%3dImgRaw%26r%3d0&exph=400&expw=400&q=sarah+chen&FORM=IRPRST&ck=08A392B76C88187E4CCCB43627C41D2F&selectedIndex=0&itb=0",
+      bio: "Former startup founder turned big tech engineer. I help developers level up their careers and master technical interviews.",
+      languages: ["English", "Mandarin"],
+      availability: "Weekends",
+      responseTime: "< 2 hours"
+    },
+    {
+      id: 2,
+      name: "Thabo Mthembu",
+      title: "Marketing Director",
+      company: "Takealot",
+      location: "Johannesburg, SA",
+      rating: 4.8,
+      sessions: 89,
+      experience: "12 years",
+      specialties: ["Digital Marketing", "Brand Strategy", "E-commerce", "Team Leadership"],
+      price: "R380/hour",
+      avatar: "/api/placeholder/120/120",
+      bio: "Built marketing teams from scratch and launched successful campaigns for major SA brands. Passionate about mentoring young marketers.",
+      languages: ["English", "Zulu", "Afrikaans"],
+      availability: "Evenings",
+      responseTime: "< 4 hours"
+    },
+    {
+      id: 3,
+      name: "Dr. Amina Hassan",
+      title: "Data Science Lead",
+      company: "Standard Bank",
+      location: "Remote",
+      rating: 5.0,
+      sessions: 156,
+      experience: "10 years",
+      specialties: ["Machine Learning", "Financial Analytics", "Python", "Career Transition"],
+      price: "R520/hour",
+      avatar: "/api/placeholder/120/120",
+      bio: "PhD in Statistics, helped 50+ professionals transition into data science. Expert in breaking down complex concepts.",
+      languages: ["English", "Arabic"],
+      availability: "Flexible",
+      responseTime: "< 1 hour"
+    },
+    {
+      id: 4,
+      name: "James Wilson",
+      title: "UX Design Manager",
+      company: "Naspers",
+      location: "Cape Town, SA",
+      rating: 4.7,
+      sessions: 73,
+      experience: "7 years",
+      specialties: ["User Research", "Design Systems", "Portfolio Review", "Figma"],
+      price: "R420/hour",
+      avatar: "/api/placeholder/120/120",
+      bio: "Self-taught designer who worked way up to managing design teams. Love helping others build strong design portfolios.",
+      languages: ["English"],
+      availability: "Mornings",
+      responseTime: "< 3 hours"
+    }
+  ];
 
   const mentorshipPrograms = [
     {
