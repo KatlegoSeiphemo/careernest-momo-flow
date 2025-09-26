@@ -97,14 +97,11 @@ const Index = () => {
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-hero opacity-90"></div>
         <div className="absolute inset-0">
-          <img src = "https://th.bing.com/th/id/OIP.N3P8anWtNABTF5AN9Kz69AHaE7?w=268&h=180&c=7&r=0&o=7&pid=1.7&rm=3" />
-
-
-
-
-
-
-          
+          <img
+            src="https://th.bing.com/th/id/OIP.N3P8anWtNABTF5AN9Kz69AHaE7?w=268&h=180&c=7&r=0&o=7&pid=1.7&rm=3"
+            className="w-full h-full object-cover"
+            alt="CareerNest Hero"
+          />
         </div>
         <div className="relative container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
@@ -189,7 +186,7 @@ const Index = () => {
               <ChevronRight className="h-5 w-5 ml-2" />
             </Button>
           </div>
-        </div> {/* ✅ properly closed */}
+        </div>
       </section>
 
       {/* Footer */}
