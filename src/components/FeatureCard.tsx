@@ -27,7 +27,7 @@ const FeatureCard = ({
         <div className="flex-1">
           <div className="flex items-center gap-2 mb-2">
             <h3 className="font-semibold text-lg text-foreground">{title}</h3>
-            <span className="momo-badge">Try now</span>
+            <span className="momo-badge"></span>
           </div>
           <p className="text-muted-foreground text-sm mb-3">{description}</p>
           <div className="bg-gradient-growth/10 p-3 rounded-lg mb-3">
