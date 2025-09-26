@@ -6,16 +6,12 @@ import { useNavigate } from "react-router-dom";
 import { 
   ArrowLeft, 
   Star, 
-  MapPin, 
-  Briefcase, 
   Calendar,
   MessageCircle,
   Video,
-  Clock,
   Users,
   Award,
-  CheckCircle,
-  DollarSign
+  CheckCircle
 } from "lucide-react";
 
 const Mentorship = () => {
@@ -34,10 +30,6 @@ const Mentorship = () => {
       specialties: ["React", "System Design", "Career Growth", "Interview Prep"],
       price: "R450/hour",
       avatar: "https://randomuser.me/api/portraits/women/44.jpg",
-      bio: "Former startup founder turned big tech engineer. I help developers level up their careers and master technical interviews.",
-      languages: ["English", "Mandarin"],
-      availability: "Weekends",
-      responseTime: "< 2 hours"
     },
     {
       id: 2,
@@ -51,10 +43,6 @@ const Mentorship = () => {
       specialties: ["Digital Marketing", "Brand Strategy", "E-commerce", "Team Leadership"],
       price: "R380/hour",
       avatar: "https://randomuser.me/api/portraits/men/22.jpg",
-      bio: "Built marketing teams from scratch and launched successful campaigns for major SA brands. Passionate about mentoring young marketers.",
-      languages: ["English", "Zulu", "Afrikaans"],
-      availability: "Evenings",
-      responseTime: "< 4 hours"
     },
     {
       id: 3,
@@ -68,10 +56,6 @@ const Mentorship = () => {
       specialties: ["Machine Learning", "Financial Analytics", "Python", "Career Transition"],
       price: "R520/hour",
       avatar: "https://randomuser.me/api/portraits/women/65.jpg",
-      bio: "PhD in Statistics, helped 50+ professionals transition into data science. Expert in breaking down complex concepts.",
-      languages: ["English", "Arabic"],
-      availability: "Flexible",
-      responseTime: "< 1 hour"
     },
     {
       id: 4,
@@ -85,10 +69,6 @@ const Mentorship = () => {
       specialties: ["User Research", "Design Systems", "Portfolio Review", "Figma"],
       price: "R420/hour",
       avatar: "https://randomuser.me/api/portraits/men/33.jpg",
-      bio: "Self-taught designer who worked way up to managing design teams. Love helping others build strong design portfolios.",
-      languages: ["English"],
-      availability: "Mornings",
-      responseTime: "< 3 hours"
     }
   ];
 
@@ -170,7 +150,18 @@ const Mentorship = () => {
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
 
-        {/* How Mentorship Works - FIRST SECTION */}
+        {/* Hero Text - TOP */}
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            Accelerate Your Career with Expert Mentors
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Connect with industry professionals who've walked the path you want to take. 
+            Get personalized guidance, insider knowledge, and career acceleration.
+          </p>
+        </div>
+
+        {/* How Mentorship Works */}
         <Card className="mb-12">
           <CardHeader>
             <CardTitle className="text-2xl text-center">How Mentorship Works</CardTitle>
@@ -212,17 +203,6 @@ const Mentorship = () => {
           </CardContent>
         </Card>
 
-        {/* Hero Section */}
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Accelerate Your Career with Expert Mentors
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Connect with industry professionals who've walked the path you want to take. 
-            Get personalized guidance, insider knowledge, and career acceleration.
-          </p>
-        </div>
-
         {/* Featured Mentors */}
         <div className="mb-12">
           <h3 className="text-2xl font-bold text-gray-900 mb-6">Featured Mentors</h3>
@@ -240,7 +220,6 @@ const Mentorship = () => {
                   <CardDescription>
                     <div className="space-y-1">
                       <p className="font-medium">{mentor.title}</p>
-                      <p className="text-sm text-career-blue">{mentor.company}</p>
                       <div className="flex items-center justify-center space-x-1">
                         <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
                         <span className="text-sm font-medium">{mentor.rating}</span>
@@ -272,102 +251,4 @@ const Mentorship = () => {
                       )}
                     </div>
                     <div className="flex space-x-2">
-                      <Button size="sm" className="flex-1 bg-career-gradient">
-                        <MessageCircle className="w-4 h-4 mr-1" />
-                        Message
-                      </Button>
-                      <Button size="sm" variant="outline" className="flex-1">
-                        <Video className="w-4 h-4 mr-1" />
-                        Book
-                      </Button>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-
-        {/* Mentorship Programs */}
-        <div className="mb-12">
-          <h3 className="text-2xl font-bold text-gray-900 mb-6">Structured Programs</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {mentorshipPrograms.map((program) => (
-              <Card key={program.id} className="hover:shadow-xl transition-all duration-300">
-                <CardHeader>
-                  <div className="flex justify-between items-start mb-2">
-                    <CardTitle className="text-xl">{program.title}</CardTitle>
-                    <Badge variant="secondary" className="bg-career-purple text-white">
-                      {program.duration}
-                    </Badge>
-                  </div>
-                  <CardDescription className="text-base">
-                    {program.description}
-                  </CardDescription>
-                  <div className="flex items-center justify-between pt-2">
-                    <span className="text-2xl font-bold text-career-green">{program.price}</span>
-                    <div className="text-sm text-gray-500">
-                      <div>{program.graduates} graduates</div>
-                      <div className="text-career-green font-medium">{program.successRate} success rate</div>
-                    </div>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-4">
-                    <div>
-                      <h4 className="font-medium mb-2">What's Included:</h4>
-                      <ul className="space-y-1">
-                        {program.features.map((feature, index) => (
-                          <li key={index} className="text-sm flex items-center">
-                            <CheckCircle className="w-4 h-4 text-career-green mr-2 flex-shrink-0" />
-                            {feature}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    <div className="flex items-center justify-between text-sm">
-                      <span className="text-gray-500">Available Mentors</span>
-                      <span className="font-medium">{program.mentors} experts</span>
-                    </div>
-                    <Button className="w-full bg-career-gradient">
-                      Join Program
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-
-        {/* CTA Section */}
-        <Card className="bg-career-gradient text-white">
-          <CardContent className="p-8 text-center">
-            <h3 className="text-2xl font-bold mb-4">Ready to Find Your Mentor?</h3>
-            <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-              Join thousands of professionals who've accelerated their careers through expert mentorship. 
-              Start your journey today.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                size="lg" 
-                variant="secondary"
-              >
-                Browse All Mentors
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline"
-                className="border-white text-white hover:bg-white hover:text-primary"
-              >
-                Join a Program
-              </Button>
-            </div>
-          </CardContent>
-        </Card>
-
-      </main>
-    </div>
-  );
-};
-
-export default Mentorship;
+                      <Button size="sm" className="flex-1 bg-career-gradient
