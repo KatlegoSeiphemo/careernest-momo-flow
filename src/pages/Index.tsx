@@ -186,16 +186,7 @@ const Index = () => {
         Launch Your Career Journey
         <ChevronRight className="h-5 w-5 ml-2" />
       </Button>
-    </div>
-
-    {/* Image */}
-    <div className="md:w-1/2">
-      <img 
-        src= "https://sdmntprnorthcentralus.oaiusercontent.com/files/00000000-bd34-622f-8f12-7865fbb9e0bc/raw?se=2025-09-26T19%3A53%3A34Z&sp=r&sv=2024-08-04&sr=b&scid=53f9408f-1639-5b61-9bbe-0251636382b2&skoid=e9d2f8b1-028a-4cff-8eb1-d0e66fbefcca&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-09-26T17%3A21%3A34Z&ske=2025-09-27T17%3A21%3A34Z&sks=b&skv=2024-08-04&sig=s8Ft11l3cllBye5FanUytfBiO8rduEaSKmqLMWFIG0U%3D"   className="w-full max-w-md mx-auto md:mx-0 rounded-lg shadow-xl"
-      />
-    </div>
-
-  </div>
+   
 </section>
 
 
