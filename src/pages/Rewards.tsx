@@ -280,10 +280,47 @@ const Rewards = () => {
             </div>
           </CardContent>
         </Card>
+              {/* Redeemable Rewards */}
+<Card className="mt-8">
+  <CardHeader>
+    <CardTitle className="flex items-center space-x-2">
+      <Crown className="w-5 h-5" />
+      <span>Redeem Your Rewards</span>
+    </CardTitle>
+    <CardDescription>
+      Use your points to claim exciting prizes and perks
+    </CardDescription>
+  </CardHeader>
+  <CardContent>
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      {[
+        { name: "Airtime", points: 500, icon: Zap },
+        { name: "Uber Voucher", points: 1000, icon: Gift },
+        { name: "KFC Voucher", points: 800, icon: Trophy },
+        { name: "Spa Voucher", points: 1200, icon: Award },
+        { name: "Amazon Gift Card", points: 1500, icon: Star },
+        { name: "Netflix Subscription", points: 2000, icon: Flame }
+      ].map((reward, index) => (
+        <Card key={index} className="p-4 text-center hover:shadow-lg transition-all">
+          <div className="flex flex-col items-center space-y-3">
+            <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white">
+              <reward.icon className="w-6 h-6" />
+            </div>
+            <h4 className="font-medium text-lg">{reward.name}</h4>
+            <p className="text-sm text-gray-500">{reward.points} points</p>
+            <Button size="sm" className="mt-2 w-full bg-career-gradient text-white">
+              Redeem
+            </Button>
+          </div>
+        </Card>
+      ))}
+    </div>
+  </CardContent>
+</Card>
 
-        {/* Redeemable Rewards */}
-        <Card className="mt-8">
-          <CardHeader>
-            <CardTitle className="flex items-center space-x-2">
-              <Crown className="w-5 h-5" />
-              <span>Redeem Your Rewards</
+      </main>
+    </div>
+  );
+};
+
+export default Rewards;

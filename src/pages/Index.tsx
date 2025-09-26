@@ -24,21 +24,21 @@ const Index = () => {
     {
       icon: CreditCard,
       title: "Subscription Payments",
-      description: "Subscribe to Career Growth Bundles with affordable monthly plans",
+      description: "Students subscribe to Career Growth Bundles with affordable monthly plans",
      
       pricing: "Starting from R50/month"
     },
     {
       icon: Users,
       title: "Split Payments",
-      description: "Instant commission distribution between mentors",
+      description: "Instant commission distribution between students, CareerNest, and mentors",
     
       pricing: "Transparent 10% platform fee"
     },
     {
       icon: Heart,
-      title: "Farming Crowdfunding",
-      description: "Community-powered funding for local farming",
+      title: "Scholarship Crowdfunding",
+      description: "Community-powered funding for learners' educational goals",
    
       pricing: "0% fees on donations"
     },
@@ -77,7 +77,11 @@ const Index = () => {
 
       pricing: "R25-100 per referral"
     },
+    {
+      icon: Shield,
+      title: "Identity Verification",
    
+    }
   ];
 
   return (
@@ -107,7 +111,8 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-hero opacity-90"></div>
         <div className="absolute inset-0">
           <img 
-            src= "https://th.bing.com/th/id/OIP.PmpSi7WeHQ8kzDvBOlategHaEU?w=297&h=180&c=7&r=0&o=7&pid=1.7&rm=3"    className="w-full h-full object-cover"
+            src= "https://sdmntprnorthcentralus.oaiusercontent.com/files/00000000-6d78-622f-82c2-048e798d5204/raw?se=2025-09-26T16%3A25%3A45Z&sp=r&sv=2024-08-04&sr=b&scid=d41bac58-2482-59ff-9bf5-c302bff9cec3&skoid=38550de5-1fab-49d1-9ebb-83af5557cc43&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-09-25T17%3A53%3A01Z&ske=2025-09-26T17%3A53%3A01Z&sks=b&skv=2024-08-04&sig=jFEdI%2B5ZCA4rrIJQT7Fow86OubE6yCazY80nMhrNcUQ%3D"   alt="African professionals using CareerNest platform"
+            className="w-full h-full object-cover"
           />
         </div>
         <div className="relative container mx-auto px-4 text-center">
