@@ -280,12 +280,3 @@ const Mentorship = () => {
 };
 
 export default Mentorship;
-
-       
-     
-      </main>
-    </div>
-  );
-};
-
-export default Mentorship;
