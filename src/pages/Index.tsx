@@ -137,9 +137,7 @@ const Index = () => {
                 Start Your Journey
                 <Zap className="h-5 w-5 ml-2" />
               </Button>
-              <Button variant="outline" className="bg-white/10 border-white/30 text-white hover:bg-white/20 text-lg px-8 py-4">
-                Watch Demo
-              </Button>
+             
             </div>
           </div>
         </div>
@@ -152,7 +150,7 @@ const Index = () => {
             <StatsCard value="15K+" label="Active Learners" change="12% this month" />
             <StatsCard value="500+" label="Expert Mentors" change="8% this month" />
             <StatsCard value="R2.3M" label="Paid to Learners" change="25% this month" />
-            <StatsCard value="98%" label="MoMo Success Rate" change="2% improvement" />
+            <StatsCard value="98%" label=" Success Rate" change="2% improvement" />
           </div>
         </div>
       </section>
@@ -163,13 +161,13 @@ const Index = () => {
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 bg-gradient-growth/10 px-4 py-2 rounded-full mb-4">
               <TrendingUp className="h-4 w-4 text-earth-green" />
-              <span className="text-earth-green font-medium">MoMo-Powered Features</span>
+              <span className="text-earth-green font-medium">Features</span>
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               Revolutionary Career Platform Features
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Experience seamless career growth with our innovative MoMo integration that makes professional development affordable and accessible.
+              Experience seamless career growth that makes professional development affordable and accessible.
             </p>
           </div>
 
@@ -197,7 +195,7 @@ const Index = () => {
             Ready to Transform Your Career?
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Join thousands of African professionals already growing their careers with CareerNest's MoMo-powered platform.
+            Join thousands of professionals already growing their careers with CareerNest.
           </p>
           <Button className="hero-button text-lg px-8 py-4 animate-pulse-glow" onClick={() => window.location.href = '/signup'}>
             Launch Your Career Journey
@@ -216,14 +214,14 @@ const Index = () => {
             <span className="text-xl font-bold">CareerNest</span>
           </div>
           <p className="text-white/80 mb-4">
-            Empowering African careers through innovative MoMo integration
+            Empowering you to reach your full potential
           </p>
           <div className="flex justify-center gap-4 text-sm text-white/60">
             <span>Privacy Policy</span>
             <span>•</span>
             <span>Terms of Service</span>
             <span>•</span>
-            <span>MoMo Partnership</span>
+          
           </div>
         </div>
       </footer>
