@@ -24,21 +24,21 @@ const Index = () => {
     {
       icon: CreditCard,
       title: "Subscription Payments",
-      description: "Students subscribe to Career Growth Bundles with affordable monthly plans",
+      description: "Subscribe to Career Growth Bundles with affordable monthly plans",
      
       pricing: "Starting from R50/month"
     },
     {
       icon: Users,
       title: "Split Payments",
-      description: "Instant commission distribution between students, CareerNest, and mentors",
+      description: "Instant commission distribution between mentors",
     
       pricing: "Transparent 10% platform fee"
     },
     {
       icon: Heart,
-      title: "Scholarship Crowdfunding",
-      description: "Community-powered funding for learners' educational goals",
+      title: "Farming Crowdfunding",
+      description: "Community-powered funding for local farming",
    
       pricing: "0% fees on donations"
     },
@@ -77,11 +77,7 @@ const Index = () => {
 
       pricing: "R25-100 per referral"
     },
-    {
-      icon: Shield,
-      title: "Identity Verification",
    
-    }
   ];
 
   return (
