@@ -186,7 +186,7 @@ const Index = () => {
         Launch Your Career Journey
         <ChevronRight className="h-5 w-5 ml-2" />
       </Button>
-   
+   </div>
 </section>
 
 
