@@ -67,11 +67,7 @@ const Index = () => {
       description: "Instant cash rewards for successful referrals",
       pricing: "R25-100 per referral"
     },
-    {
-      icon: Shield,
-      title: "Identity Verification",
-      description: "Secure verification process to protect user identities"
-    }
+   
   ];
 
   return (
