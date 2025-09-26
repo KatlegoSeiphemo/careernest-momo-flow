@@ -251,4 +251,94 @@ const Mentorship = () => {
                       )}
                     </div>
                     <div className="flex space-x-2">
-                      <Button size="sm" className="flex-1 bg-career-gradient
+                      <Button size="sm" className="flex-1 bg-career-gradient">
+                        <MessageCircle className="w-4 h-4 mr-1" />
+                        Message
+                      </Button>
+                      <Button size="sm" variant="outline" className="flex-1">
+                        <Video className="w-4 h-4 mr-1" />
+                        Book
+                      </Button>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+
+        {/* Structured Mentorship Programs */}
+        <div className="mb-12">
+          <h3 className="text-2xl font-bold text-gray-900 mb-6">Structured Programs</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {mentorshipPrograms.map((program) => (
+              <Card key={program.id} className="hover:shadow-xl transition-all duration-300">
+                <CardHeader>
+                  <div className="flex justify-between items-start mb-2">
+                    <CardTitle className="text-xl">{program.title}</CardTitle>
+                    <Badge variant="secondary" className="bg-career-purple text-white">
+                      {program.duration}
+                    </Badge>
+                  </div>
+                  <CardDescription className="text-base">
+                    {program.description}
+                  </CardDescription>
+                  <div className="flex items-center justify-between pt-2">
+                    <span className="text-2xl font-bold text-career-green">{program.price}</span>
+                    <div className="text-sm text-gray-500">
+                      <div>{program.graduates} graduates</div>
+                      <div className="text-career-green font-medium">{program.successRate} success rate</div>
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-4">
+                    <div>
+                      <h4 className="font-medium mb-2">What's Included:</h4>
+                      <ul className="space-y-1">
+                        {program.features.map((feature, index) => (
+                          <li key={index} className="text-sm flex items-center">
+                            <CheckCircle className="w-4 h-4 text-career-green mr-2 flex-shrink-0" />
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div className="flex items-center justify-between text-sm">
+                      <span className="text-gray-500">Available Mentors</span>
+                      <span className="font-medium">{program.mentors} experts</span>
+                    </div>
+                    <Button className="w-full bg-career-gradient">
+                      Join Program
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+
+        {/* CTA */}
+        <Card className="bg-career-gradient text-white">
+          <CardContent className="p-8 text-center">
+            <h3 className="text-2xl font-bold mb-4">Ready to Find Your Mentor?</h3>
+            <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
+              Join thousands of professionals who've accelerated their careers through expert mentorship. 
+              Start your journey today.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" variant="secondary">
+                Browse All Mentors
+              </Button>
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
+                Join a Program
+              </Button>
+            </div>
+          </CardContent>
+        </Card>
+      </main>
+    </div>
+  );
+};
+
+export default Mentorship;
