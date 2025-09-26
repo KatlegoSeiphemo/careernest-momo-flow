@@ -19,15 +19,29 @@ const Dashboard = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 scroll-smooth">
       {/* Header */}
       <header className="bg-white shadow-md border-b sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <h1 className="text-3xl font-extrabold text-primary tracking-wide">CareerNest</h1>
-            <Button variant="outline" onClick={() => navigate("/")}>
-              <LogOut className="w-4 h-4 mr-2" /> Sign Out
-            </Button>
+            <div className="flex items-center space-x-6">
+              {/* Features List in Header */}
+              <nav className="hidden md:flex space-x-4">
+                {features.map((feature, i) => (
+                  <a
+                    key={i}
+                    href={`#${feature.title.replace(/\s+/g, "-").toLowerCase()}`}
+                    className="text-gray-700 hover:text-indigo-600 font-medium transition-colors"
+                  >
+                    {feature.title}
+                  </a>
+                ))}
+              </nav>
+              <Button variant="outline" onClick={() => navigate("/")}>
+                <LogOut className="w-4 h-4 mr-2" /> Sign Out
+              </Button>
+            </div>
           </div>
         </div>
       </header>
@@ -49,6 +63,7 @@ const Dashboard = () => {
           {features.map((feature, index) => (
             <Card
               key={index}
+              id={feature.title.replace(/\s+/g, "-").toLowerCase()} // anchor target
               className="hover:scale-105 hover:shadow-2xl transition-transform duration-300 cursor-pointer"
               onClick={() => navigate(feature.path)}
             >
@@ -77,7 +92,10 @@ const Dashboard = () => {
             { value: "5,000+", label: "Career Assessments", color: "text-purple-500" },
             { value: "95%", label: "User Satisfaction", color: "text-green-500" }
           ].map((stat, i) => (
-            <div key={i} className="bg-white rounded-2xl shadow-lg p-8 text-center transform hover:scale-105 transition-transform duration-300">
+            <div
+              key={i}
+              className="bg-white rounded-2xl shadow-lg p-8 text-center transform hover:scale-105 transition-transform duration-300"
+            >
               <h3 className={`text-4xl font-extrabold mb-2 ${stat.color}`}>{stat.value}</h3>
               <p className="text-gray-600">{stat.label}</p>
             </div>
