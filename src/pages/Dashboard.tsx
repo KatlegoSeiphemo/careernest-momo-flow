@@ -1,7 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
-import { MessageCircle, FileText, FileCheck, Target, LogOut } from "lucide-react";
+import { MessageCircle, FileText, FileCheck, Target, LogOut, Users, Trophy } from "lucide-react";
 
 const Dashboard = () => {
   const navigate = useNavigate();
@@ -34,6 +34,20 @@ const Dashboard = () => {
       description: "Discover your ideal career path",
       path: "/career-assessment",
       color: "bg-orange-500"
+    },
+    {
+      icon: Users,
+      title: "Communities",
+      description: "Join career-focused communities",
+      path: "/communities",
+      color: "bg-teal-500"
+    },
+    {
+      icon: Trophy,
+      title: "Rewards Hub",
+      description: "Track your progress and earn rewards",
+      path: "/rewards",
+      color: "bg-indigo-500"
     }
   ];
 
@@ -63,7 +77,7 @@ const Dashboard = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, index) => (
             <Card key={index} className="hover:shadow-lg transition-shadow cursor-pointer" onClick={() => navigate(feature.path)}>
               <CardHeader>
