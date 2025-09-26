@@ -29,60 +29,12 @@ const Rewards = () => {
   };
 
   const badges = [
-    {
-      id: 1,
-      name: "Early Bird",
-      description: "Logged in before 8 AM for 5 consecutive days",
-      icon: Calendar,
-      color: "bg-yellow-500",
-      earned: true,
-      date: "2024-01-15"
-    },
-    {
-      id: 2,
-      name: "Community Builder",
-      description: "Joined 3 different communities",
-      icon: Star,
-      color: "bg-blue-500",
-      earned: true,
-      date: "2024-01-20"
-    },
-    {
-      id: 3,
-      name: "Streak Master",
-      description: "Maintained 10-day login streak",
-      icon: Flame,
-      color: "bg-red-500",
-      earned: true,
-      date: "2024-01-25"
-    },
-    {
-      id: 4,
-      name: "Career Explorer",
-      description: "Completed career assessment",
-      icon: Target,
-      color: "bg-green-500",
-      earned: true,
-      date: "2024-01-18"
-    },
-    {
-      id: 5,
-      name: "Content Creator",
-      description: "Generated 5 CVs and cover letters",
-      icon: Award,
-      color: "bg-purple-500",
-      earned: false,
-      date: null
-    },
-    {
-      id: 6,
-      name: "VIP Member",
-      description: "Reach level 10",
-      icon: Crown,
-      color: "bg-orange-500",
-      earned: false,
-      date: null
-    }
+    { id: 1, name: "Early Bird", description: "Logged in before 8 AM for 5 consecutive days", icon: Calendar, color: "bg-yellow-500", earned: true, date: "2024-01-15" },
+    { id: 2, name: "Community Builder", description: "Joined 3 different communities", icon: Star, color: "bg-blue-500", earned: true, date: "2024-01-20" },
+    { id: 3, name: "Streak Master", description: "Maintained 10-day login streak", icon: Flame, color: "bg-red-500", earned: true, date: "2024-01-25" },
+    { id: 4, name: "Career Explorer", description: "Completed career assessment", icon: Target, color: "bg-green-500", earned: true, date: "2024-01-18" },
+    { id: 5, name: "Content Creator", description: "Generated 5 CVs and cover letters", icon: Award, color: "bg-purple-500", earned: false, date: null },
+    { id: 6, name: "VIP Member", description: "Reach level 10", icon: Crown, color: "bg-orange-500", earned: false, date: null }
   ];
 
   const recentActivity = [
@@ -118,60 +70,50 @@ const Rewards = () => {
 
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        
         {/* Stats Overview */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
           <Card className="bg-gradient-to-r from-blue-500 to-blue-600 text-white">
-            <CardContent className="p-6">
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="text-blue-100">Total Points</p>
-                  <p className="text-3xl font-bold">{userStats.totalPoints.toLocaleString()}</p>
-                </div>
-                <Zap className="w-8 h-8 text-blue-200" />
+            <CardContent className="p-6 flex items-center justify-between">
+              <div>
+                <p className="text-blue-100">Total Points</p>
+                <p className="text-3xl font-bold">{userStats.totalPoints.toLocaleString()}</p>
               </div>
+              <Zap className="w-8 h-8 text-blue-200" />
             </CardContent>
           </Card>
 
           <Card className="bg-gradient-to-r from-green-500 to-green-600 text-white">
-            <CardContent className="p-6">
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="text-green-100">Current Streak</p>
-                  <p className="text-3xl font-bold">{userStats.currentStreak} days</p>
-                </div>
-                <Flame className="w-8 h-8 text-green-200" />
+            <CardContent className="p-6 flex items-center justify-between">
+              <div>
+                <p className="text-green-100">Current Streak</p>
+                <p className="text-3xl font-bold">{userStats.currentStreak} days</p>
               </div>
+              <Flame className="w-8 h-8 text-green-200" />
             </CardContent>
           </Card>
 
           <Card className="bg-gradient-to-r from-purple-500 to-purple-600 text-white">
-            <CardContent className="p-6">
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="text-purple-100">Total Logins</p>
-                  <p className="text-3xl font-bold">{userStats.totalLogins}</p>
-                </div>
-                <Calendar className="w-8 h-8 text-purple-200" />
+            <CardContent className="p-6 flex items-center justify-between">
+              <div>
+                <p className="text-purple-100">Total Logins</p>
+                <p className="text-3xl font-bold">{userStats.totalLogins}</p>
               </div>
+              <Calendar className="w-8 h-8 text-purple-200" />
             </CardContent>
           </Card>
 
           <Card className="bg-gradient-to-r from-orange-500 to-orange-600 text-white">
-            <CardContent className="p-6">
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="text-orange-100">Badges Earned</p>
-                  <p className="text-3xl font-bold">{userStats.badges}</p>
-                </div>
-                <Trophy className="w-8 h-8 text-orange-200" />
+            <CardContent className="p-6 flex items-center justify-between">
+              <div>
+                <p className="text-orange-100">Badges Earned</p>
+                <p className="text-3xl font-bold">{userStats.badges}</p>
               </div>
+              <Trophy className="w-8 h-8 text-orange-200" />
             </CardContent>
           </Card>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          
           {/* Level Progress */}
           <Card>
             <CardHeader>
@@ -179,9 +121,7 @@ const Rewards = () => {
                 <Target className="w-5 h-5" />
                 <span>Level Progress</span>
               </CardTitle>
-              <CardDescription>
-                Keep logging in to earn more points and level up!
-              </CardDescription>
+              <CardDescription>Keep logging in to earn more points and level up!</CardDescription>
             </CardHeader>
             <CardContent>
               <div className="space-y-4">
@@ -213,9 +153,7 @@ const Rewards = () => {
                 <Gift className="w-5 h-5" />
                 <span>Recent Activity</span>
               </CardTitle>
-              <CardDescription>
-                Your latest point-earning activities
-              </CardDescription>
+              <CardDescription>Your latest point-earning activities</CardDescription>
             </CardHeader>
             <CardContent>
               <div className="space-y-3">
@@ -242,9 +180,7 @@ const Rewards = () => {
               <Trophy className="w-5 h-5" />
               <span>Achievement Badges</span>
             </CardTitle>
-            <CardDescription>
-              Collect badges by completing various activities and milestones
-            </CardDescription>
+            <CardDescription>Collect badges by completing various activities and milestones</CardDescription>
           </CardHeader>
           <CardContent>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -280,43 +216,46 @@ const Rewards = () => {
             </div>
           </CardContent>
         </Card>
-              {/* Redeemable Rewards */}
-<Card className="mt-8">
-  <CardHeader>
-    <CardTitle className="flex items-center space-x-2">
-      <Crown className="w-5 h-5" />
-      <span>Redeem Your Rewards</span>
-    </CardTitle>
-    <CardDescription>
-      Use your points to claim exciting prizes and perks
-    </CardDescription>
-  </CardHeader>
-  <CardContent>
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-      {[
-        { name: "Airtime", points: 500, icon: Zap },
-        { name: "Uber Voucher", points: 1000, icon: Gift },
-        { name: "KFC Voucher", points: 800, icon: Trophy },
-        { name: "Spa Voucher", points: 1200, icon: Award },
-        { name: "Amazon Gift Card", points: 1500, icon: Star },
-        { name: "Netflix Subscription", points: 2000, icon: Flame }
-      ].map((reward, index) => (
-        <Card key={index} className="p-4 text-center hover:shadow-lg transition-all">
-          <div className="flex flex-col items-center space-y-3">
-            <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white">
-              <reward.icon className="w-6 h-6" />
+
+        {/* Redeemable Rewards */}
+        <Card className="mt-8">
+          <CardHeader>
+            <CardTitle className="flex items-center space-x-2">
+              <Crown className="w-5 h-5" />
+              <span>Redeem Your Rewards</span>
+            </CardTitle>
+            <CardDescription>Use your points to claim exciting prizes and perks</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+              {[
+                { name: "Airtime", points: 500, icon: Zap },
+                { name: "Uber Voucher", points: 1000, icon: Gift },
+                { name: "KFC Voucher", points: 800, icon: Trophy },
+                { name: "Spa Voucher", points: 1200, icon: Award },
+                { name: "Amazon Gift Card", points: 1500, icon: Star },
+                { name: "Netflix Subscription", points: 2000, icon: Flame }
+              ].map((reward, index) => (
+                <Card key={index} className="p-4 text-center hover:shadow-lg transition-all">
+                  <div className="flex flex-col items-center space-y-3">
+                    <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white">
+                      <reward.icon className="w-6 h-6" />
+                    </div>
+                    <h4 className="font-medium text-lg">{reward.name}</h4>
+                    <p className="text-sm text-gray-500">{reward.points} points</p>
+                    {/* Updated Redeem Button */}
+                    <Button
+                      size="sm"
+                      className="mt-2 w-full bg-gradient-to-r from-yellow-400 to-orange-500 text-white font-semibold shadow-lg hover:scale-105 transform transition-all"
+                    >
+                      Redeem
+                    </Button>
+                  </div>
+                </Card>
+              ))}
             </div>
-            <h4 className="font-medium text-lg">{reward.name}</h4>
-            <p className="text-sm text-gray-500">{reward.points} points</p>
-            <Button size="sm" className="mt-2 w-full bg-career-gradient text-white">
-              Redeem
-            </Button>
-          </div>
+          </CardContent>
         </Card>
-      ))}
-    </div>
-  </CardContent>
-</Card>
 
       </main>
     </div>
@@ -324,3 +263,4 @@ const Rewards = () => {
 };
 
 export default Rewards;
+
