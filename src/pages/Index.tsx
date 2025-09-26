@@ -106,8 +106,7 @@ const Index = () => {
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-hero opacity-90"></div>
         <div className="absolute inset-0">
-          <img 
-            src= "https://th.bing.com/th/id/OIP.PmpSi7WeHQ8kzDvBOlategHaEU?w=297&h=180&c=7&r=0&o=7&pid=1.7&rm=3"    className="w-full h-full object-cover"
+          <img src= "https://th.bing.com/th/id/OIP.PmpSi7WeHQ8kzDvBOlategHaEU?w=297&h=180&c=7&r=0&o=7&pid=1.7&rm=3"    className="w-full h-full object-cover"
           />
         </div>
         <div className="relative container mx-auto px-4 text-center">
