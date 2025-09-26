@@ -17,6 +17,24 @@ const Dashboard = () => {
     { icon: Trophy, title: "Rewards Hub", description: "Track your progress and earn rewards", path: "/rewards", color: "bg-indigo-500" }
   ];
 
+  const quickStats = [
+    { value: "150K+", label: "Active Users", change: "+12% this month", color: "text-indigo-500" },
+    { value: "500+", label: "Expert Mentors", change: "+8% this month", color: "text-purple-500" },
+    { value: "100+", label: "Communities", change: "+25% this month", color: "text-green-500" },
+    { value: "98%", label: "Success Rate", change: "+2% improvement", color: "text-blue-500" }
+  ];
+
+  const platformFeatures = [
+    { title: "Subscription Payments", description: "Students subscribe to Career Growth Bundles with affordable monthly plans starting from R50/month" },
+    { title: "Split Payments", description: "Instant commission distribution between students, CareerNest, and mentors; Transparent 10% platform fee" },
+    { title: "Scholarship Crowdfunding", description: "Community-powered funding for learners' educational goals; 0% fees on donations" },
+    { title: "Job Application Services", description: "CV scoring, psychometric tests, and mock interviews; R15-50 per service" },
+    { title: "Pay-As-You-Learn", description: "Unlock lessons progressively without large upfront costs; R10-25 per lesson" },
+    { title: "Employer Payments", description: "Streamlined recruitment fee processing and candidate rewards; Custom enterprise rates" },
+    { title: "Savings & Goals", description: "Gamified savings system for educational investments; Free goal tracking" },
+    { title: "Referral Rewards", description: "Instant cash rewards for successful referrals; R25-100 per referral" }
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 scroll-smooth">
       {/* Header */}
@@ -24,19 +42,7 @@ const Dashboard = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <h1 className="text-3xl font-extrabold text-primary tracking-wide">CareerNest</h1>
-            <div className="flex items-center space-x-6">
-              {/* Features List in Header */}
-              <nav className="hidden md:flex space-x-4">
-                {features.map((feature, i) => (
-                  <a
-                    key={i}
-                    href={`#${feature.title.replace(/\s+/g, "-").toLowerCase()}`}
-                    className="text-gray-700 hover:text-indigo-600 font-medium transition-colors"
-                  >
-                    {feature.title}
-                  </a>
-                ))}
-              </nav>
+            <div className="flex items-center space-x-4">
               <Button variant="outline" onClick={() => navigate("/")}>
                 <LogOut className="w-4 h-4 mr-2" /> Sign Out
               </Button>
@@ -46,15 +52,24 @@ const Dashboard = () => {
       </header>
 
       {/* Main Content */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Hero Text */}
-        <div className="mb-12 text-center">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
-            Welcome to Your Career Hub
-          </h2>
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12">
+        {/* Hero */}
+        <div className="text-center space-y-4">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900">Welcome to CareerNest</h2>
           <p className="text-xl md:text-2xl text-gray-600">
-            Explore AI-powered tools to accelerate your career growth
+            Explore AI-powered tools and platform features to accelerate your career growth.
           </p>
+        </div>
+
+        {/* Quick Stats */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+          {quickStats.map((stat, i) => (
+            <div key={i} className="bg-white rounded-2xl shadow-lg p-6 text-center">
+              <h3 className={`text-4xl font-extrabold mb-1 ${stat.color}`}>{stat.value}</h3>
+              <p className="text-gray-700">{stat.label}</p>
+              <p className="text-gray-500 text-sm">{stat.change}</p>
+            </div>
+          ))}
         </div>
 
         {/* Feature Cards */}
@@ -62,7 +77,6 @@ const Dashboard = () => {
           {features.map((feature, index) => (
             <Card
               key={index}
-              id={feature.title.replace(/\s+/g, "-").toLowerCase()} // anchor target
               className="hover:scale-105 hover:shadow-2xl transition-transform duration-300 cursor-pointer"
               onClick={() => navigate(feature.path)}
             >
@@ -84,29 +98,34 @@ const Dashboard = () => {
           ))}
         </div>
 
-        {/* Quick Stats */}
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
-          {[
-            { value: "10,000+", label: "CVs Generated", color: "text-indigo-500" },
-            { value: "5,000+", label: "Career Assessments", color: "text-purple-500" },
-            { value: "95%", label: "User Satisfaction", color: "text-green-500" }
-          ].map((stat, i) => (
-            <div
-              key={i}
-              className="bg-white rounded-2xl shadow-lg p-8 text-center transform hover:scale-105 transition-transform duration-300"
-            >
-              <h3 className={`text-4xl font-extrabold mb-2 ${stat.color}`}>{stat.value}</h3>
-              <p className="text-gray-600">{stat.label}</p>
-            </div>
-          ))}
+        {/* Platform Features Section */}
+        <section className="space-y-6">
+          <h3 className="text-3xl font-bold text-gray-900">Revolutionary Career Platform Features</h3>
+          <p className="text-gray-600 max-w-3xl">
+            Experience seamless career growth that makes professional development affordable and accessible.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {platformFeatures.map((pf, idx) => (
+              <Card key={idx} className="border hover:shadow-lg transition-all">
+                <CardHeader>
+                  <CardTitle className="text-lg font-bold">{pf.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-700 text-sm">{pf.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </section>
+
+        {/* CTA */}
+        <div className="text-center mt-12">
+          <Button onClick={() => navigate("/mentorship")} className="bg-indigo-500 text-white px-6 py-3 rounded-lg text-lg">
+            Launch Your Career Journey
+          </Button>
         </div>
       </main>
     </div>
-  );
-};
-
-export default Dashboard;
-
   );
 };
 
