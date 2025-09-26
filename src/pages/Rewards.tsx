@@ -13,12 +13,7 @@ import {
   ArrowLeft,
   Flame,
   Award,
-  Crown,
-  Car,
-  ShoppingCart,
-  Heart,
-  Package,
-  Film
+  Crown
 } from "lucide-react";
 
 const Rewards = () => {
@@ -34,12 +29,60 @@ const Rewards = () => {
   };
 
   const badges = [
-    { id: 1, name: "Early Bird", description: "Logged in before 8 AM for 5 consecutive days", icon: Calendar, color: "bg-yellow-500", earned: true, date: "2024-01-15" },
-    { id: 2, name: "Community Builder", description: "Joined 3 different communities", icon: Star, color: "bg-blue-500", earned: true, date: "2024-01-20" },
-    { id: 3, name: "Streak Master", description: "Maintained 10-day login streak", icon: Flame, color: "bg-red-500", earned: true, date: "2024-01-25" },
-    { id: 4, name: "Career Explorer", description: "Completed career assessment", icon: Target, color: "bg-green-500", earned: true, date: "2024-01-18" },
-    { id: 5, name: "Content Creator", description: "Generated 5 CVs and cover letters", icon: Award, color: "bg-purple-500", earned: false, date: null },
-    { id: 6, name: "VIP Member", description: "Reach level 10", icon: Crown, color: "bg-orange-500", earned: false, date: null }
+    {
+      id: 1,
+      name: "Early Bird",
+      description: "Logged in before 8 AM for 5 consecutive days",
+      icon: Calendar,
+      color: "bg-yellow-500",
+      earned: true,
+      date: "2024-01-15"
+    },
+    {
+      id: 2,
+      name: "Community Builder",
+      description: "Joined 3 different communities",
+      icon: Star,
+      color: "bg-blue-500",
+      earned: true,
+      date: "2024-01-20"
+    },
+    {
+      id: 3,
+      name: "Streak Master",
+      description: "Maintained 10-day login streak",
+      icon: Flame,
+      color: "bg-red-500",
+      earned: true,
+      date: "2024-01-25"
+    },
+    {
+      id: 4,
+      name: "Career Explorer",
+      description: "Completed career assessment",
+      icon: Target,
+      color: "bg-green-500",
+      earned: true,
+      date: "2024-01-18"
+    },
+    {
+      id: 5,
+      name: "Content Creator",
+      description: "Generated 5 CVs and cover letters",
+      icon: Award,
+      color: "bg-purple-500",
+      earned: false,
+      date: null
+    },
+    {
+      id: 6,
+      name: "VIP Member",
+      description: "Reach level 10",
+      icon: Crown,
+      color: "bg-orange-500",
+      earned: false,
+      date: null
+    }
   ];
 
   const recentActivity = [
@@ -51,8 +94,6 @@ const Rewards = () => {
   ];
 
   const levelProgress = ((userStats.totalPoints % 500) / 500) * 100;
-
-  const userPoints = userStats.totalPoints; // For reward redemption logic
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 via-yellow-50 to-red-50">
@@ -77,6 +118,7 @@ const Rewards = () => {
 
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        
         {/* Stats Overview */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
           <Card className="bg-gradient-to-r from-blue-500 to-blue-600 text-white">
@@ -128,8 +170,8 @@ const Rewards = () => {
           </Card>
         </div>
 
-        {/* Level Progress & Recent Activity */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          
           {/* Level Progress */}
           <Card>
             <CardHeader>
@@ -244,27 +286,4 @@ const Rewards = () => {
           <CardHeader>
             <CardTitle className="flex items-center space-x-2">
               <Crown className="w-5 h-5" />
-              <span>Redeem Your Rewards</span>
-            </CardTitle>
-            <CardDescription>
-              Use your points to claim exciting prizes and perks
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-              {[
-                { name: "Airtime", points: 500, icon: Zap },
-                { name: "Uber Voucher", points: 1000, icon: Gift },
-                { name: "KFC Voucher", points: 800, icon: Trophy },
-                { name: "Spa Voucher", points: 1200, icon: Award },
-                { name: "Amazon Gift Card", points: 1500, icon: Star },
-                { name: "Netflix Subscription", points: 2000, icon: Flame }
-              ].map((reward, index) => {
-                const canRedeem = userPoints >= reward.points;
-                const pointsNeeded = reward.points - userPoints;
-                const progress = Math.min((userPoints / reward.points) * 100, 100);
-
-                return (
-                  <Card key={index} className="p-4 text-center hover:shadow-lg transition-all">
-                    <div className="flex flex-col items
-
+              <span>Redeem Your Rewards</
