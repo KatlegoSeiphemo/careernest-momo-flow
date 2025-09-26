@@ -98,8 +98,7 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-hero opacity-90"></div>
         <div className="absolute inset-0">
           <img 
-            src= "https://th.bing.com/th/id/OIP.R7sqyi11FmDEq4jdBAuhPwHaFu?w=222&h=180&c=7&r=0&o=5&pid=1.7" alt="African professionals using CareerNest platform"
-            className="w-full h-full object-cover"
+            src= "https://drive.google.com/file/d/1NY4P3fpgeaZ5JhLO2bb5PgflBv0gGehi/view?usp=sharing"   className="w-full h-full object-cover"
           />
         </div>
         <div className="relative container mx-auto px-4 text-center">
