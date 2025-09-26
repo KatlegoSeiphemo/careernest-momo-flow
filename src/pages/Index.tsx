@@ -111,7 +111,7 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-hero opacity-90"></div>
         <div className="absolute inset-0">
           <img 
-            src= "https://sdmntprnorthcentralus.oaiusercontent.com/files/00000000-6d78-622f-82c2-048e798d5204/raw?se=2025-09-26T16%3A25%3A45Z&sp=r&sv=2024-08-04&sr=b&scid=d41bac58-2482-59ff-9bf5-c302bff9cec3&skoid=38550de5-1fab-49d1-9ebb-83af5557cc43&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-09-25T17%3A53%3A01Z&ske=2025-09-26T17%3A53%3A01Z&sks=b&skv=2024-08-04&sig=jFEdI%2B5ZCA4rrIJQT7Fow86OubE6yCazY80nMhrNcUQ%3D"   alt="African professionals using CareerNest platform"
+            src= "https://sdmntprnorthcentralus.oaiusercontent.com/files/00000000-6d78-622f-82c2-048e798d5204/raw?se=2025-09-26T18%3A52%3A24Z&sp=r&sv=2024-08-04&sr=b&scid=b08b1409-90c2-5b49-abcf-26b344a137da&skoid=e9d2f8b1-028a-4cff-8eb1-d0e66fbefcca&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-09-26T17%3A19%3A31Z&ske=2025-09-27T17%3A19%3A31Z&sks=b&skv=2024-08-04&sig=yorG0bJxu5Y2O8DrkEx5HUN1HkInBNN9%2BGfvUwI8Q%2BI%3D"   alt="African professionals using CareerNest platform"
             className="w-full h-full object-cover"
           />
         </div>
