@@ -33,7 +33,7 @@ const Mentorship = () => {
       experience: "8 years",
       specialties: ["React", "System Design", "Career Growth", "Interview Prep"],
       price: "R450/hour",
-      avatar: "/api/placeholder/120/120",
+      avatar: "https://www.bing.com/images/search?view=detailV2&ccid=C9sJoWtM&id=D35DFBB4758A9F1F7DBFA36579C2475ACD7F8531&thid=OIP.C9sJoWtMZWhSXRkbKY-ErwAAAA&mediaurl=https%3a%2f%2fassets.weforum.org%2fauthor%2fimage%2fresponsive_small_qQ1CZFILHtZWcVOc4EX3uZ7K3Y7lrzOw4ypY3l-lYZg.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.0bdb09a16b4c6568525d191b298f84af%3frik%3dMYV%252fzVpHwnllow%26pid%3dImgRaw%26r%3d0&exph=400&expw=400&q=sarah+chen&FORM=IRPRST&ck=08A392B76C88187E4CCCB43627C41D2F&selectedIndex=0&itb=0",
       bio: "Former startup founder turned big tech engineer. I help developers level up their careers and master technical interviews.",
       languages: ["English", "Mandarin"],
       availability: "Weekends",
