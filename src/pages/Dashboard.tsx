@@ -1,7 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
-import { MessageCircle, FileText, FileCheck, Target, LogOut, Users, Trophy } from "lucide-react";
+import { MessageCircle, FileText, FileCheck, Target, LogOut, Users, Trophy, MapPin, BookOpen, Briefcase } from "lucide-react";
 
 const Dashboard = () => {
   const navigate = useNavigate();
@@ -36,6 +36,27 @@ const Dashboard = () => {
       color: "bg-orange-500"
     },
     {
+      icon: MapPin,
+      title: "Career Pathways",
+      description: "Explore detailed career roadmaps",
+      path: "/career-pathways",
+      color: "bg-career-blue"
+    },
+    {
+      icon: BookOpen,
+      title: "Mentorship",
+      description: "Connect with industry experts",
+      path: "/mentorship",
+      color: "bg-career-purple"
+    },
+    {
+      icon: Briefcase,
+      title: "Job Hub",
+      description: "Find your dream job opportunities",
+      path: "/job-hub",
+      color: "bg-career-green"
+    },
+    {
       icon: Users,
       title: "Communities",
       description: "Join career-focused communities",
@@ -52,7 +73,7 @@ const Dashboard = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 via-yellow-50 to-red-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
       {/* Header */}
       <header className="bg-white shadow-sm border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

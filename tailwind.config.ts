@@ -27,6 +27,10 @@ export default {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
         },
+        "career-blue": "hsl(var(--career-blue))",
+        "career-green": "hsl(var(--career-green))",
+        "career-purple": "hsl(var(--career-purple))",
+        "career-orange": "hsl(var(--career-orange))",
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
@@ -63,6 +67,11 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+      },
+      backgroundImage: {
+        "career-gradient": "var(--career-gradient)",
+        "success-gradient": "var(--success-gradient)",
+        "warning-gradient": "var(--warning-gradient)",
       },
       borderRadius: {
         lg: "var(--radius)",

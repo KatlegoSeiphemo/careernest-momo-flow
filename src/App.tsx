@@ -14,6 +14,9 @@ import CoverLetter from "./pages/CoverLetter";
 import CareerAssessment from "./pages/CareerAssessment";
 import Communities from "./pages/Communities";
 import Rewards from "./pages/Rewards";
+import CareerPathways from "./pages/CareerPathways";
+import Mentorship from "./pages/Mentorship";
+import JobHub from "./pages/JobHub";
 
 const queryClient = new QueryClient();
 
@@ -32,6 +35,9 @@ const App = () => (
           <Route path="/cv-generator" element={<CVGenerator />} />
           <Route path="/cover-letter" element={<CoverLetter />} />
           <Route path="/career-assessment" element={<CareerAssessment />} />
+          <Route path="/career-pathways" element={<CareerPathways />} />
+          <Route path="/mentorship" element={<Mentorship />} />
+          <Route path="/job-hub" element={<JobHub />} />
           <Route path="/communities" element={<Communities />} />
           <Route path="/rewards" element={<Rewards />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
