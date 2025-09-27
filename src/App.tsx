@@ -3,6 +3,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import SignUp from "./pages/SignUp";
@@ -17,6 +18,7 @@ import Rewards from "./pages/Rewards";
 import CareerPathways from "./pages/CareerPathways";
 import Mentorship from "./pages/Mentorship";
 import JobHub from "./pages/JobHub";
+import ApplyMentor from "./pages/ApplyMentor"; // ✅ Import new page
 
 const queryClient = new QueryClient();
 
@@ -40,7 +42,10 @@ const App = () => (
           <Route path="/job-hub" element={<JobHub />} />
           <Route path="/communities" element={<Communities />} />
           <Route path="/rewards" element={<Rewards />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          
+          {/* ✅ New route */}
+          <Route path="/apply-mentor" element={<ApplyMentor />} />
+
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
@@ -49,3 +54,4 @@ const App = () => (
 );
 
 export default App;
+
