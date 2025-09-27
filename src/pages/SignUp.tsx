@@ -231,6 +231,16 @@ const SignUp = () => {
             <Button type="submit" className="w-full" size="lg" disabled={!isEmailVerified}>
               Create Account
             </Button>
+
+            {/* Sign In Link */}
+            <div className="text-center mt-4">
+              <p className="text-sm text-muted-foreground">
+                Already have an account?{" "}
+                <Button variant="link" className="p-0" onClick={() => navigate("/signin")}>
+                  Sign in here
+                </Button>
+              </p>
+            </div>
           </form>
         </CardContent>
       </Card>
