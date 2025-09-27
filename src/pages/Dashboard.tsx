@@ -25,17 +25,6 @@ const Dashboard = () => {
     { value: "98%", label: "Success Rate", change: "+2% improvement", color: "text-blue-500" }
   ];
 
-  const platformFeatures = [
-    { title: "Subscription Payments", description: "Students subscribe to Career Growth Bundles with affordable monthly plans starting from R50/month" },
-    { title: "Split Payments", description: "Instant commission distribution between students, CareerNest, and mentors; Transparent 10% platform fee" },
-    { title: "Scholarship Crowdfunding", description: "Community-powered funding for learners' educational goals; 0% fees on donations" },
-    { title: "Job Application Services", description: "CV scoring, psychometric tests, and mock interviews; R15-50 per service" },
-    { title: "Pay-As-You-Learn", description: "Unlock lessons progressively without large upfront costs; R10-25 per lesson" },
-    { title: "Employer Payments", description: "Streamlined recruitment fee processing and candidate rewards; Custom enterprise rates" },
-    { title: "Savings & Goals", description: "Gamified savings system for educational investments; Free goal tracking" },
-    { title: "Referral Rewards", description: "Instant cash rewards for successful referrals; R25-100 per referral" }
-  ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 scroll-smooth">
       {/* Header */}
@@ -44,11 +33,8 @@ const Dashboard = () => {
           <div className="flex justify-between items-center h-16">
             <h1 className="text-3xl font-extrabold text-primary tracking-wide">CareerNest</h1>
             <div className="flex items-center space-x-4">
-              {/* Apply to be a Mentor Button */}
-              <Button
-                variant="secondary"
-                onClick={() => navigate("/apply-mentor")}
-              >
+              {/* ✅ Apply to be a Mentor Button */}
+              <Button variant="secondary" onClick={() => navigate("/apply-mentor")}>
                 Apply to be a Mentor
               </Button>
 
