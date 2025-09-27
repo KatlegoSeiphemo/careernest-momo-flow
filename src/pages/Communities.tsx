@@ -1,8 +1,23 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"; // ✅ Added from Mentorship
 import { useNavigate } from "react-router-dom";
-import { Users, Heart, Code, Briefcase, Camera, Music, ArrowLeft, Star } from "lucide-react";
+import { 
+  Users, 
+  Heart, 
+  Code, 
+  Briefcase, 
+  Camera, 
+  Music, 
+  ArrowLeft, 
+  Star, 
+  Award, 
+  Calendar, 
+  MessageCircle, 
+  Video, 
+  CheckCircle 
+} from "lucide-react"; // ✅ Added full icon set from Mentorship
 
 const Communities = () => {
   const navigate = useNavigate();
