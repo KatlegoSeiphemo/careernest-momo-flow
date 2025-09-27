@@ -45,12 +45,14 @@ const SignUp = () => {
     return regex.test(password);
   };
 
+  // Hardcoded verification code
   const sendVerificationCode = () => {
     if (!formData.email) {
       toast.error("Please enter an email first.");
       return;
     }
-    const code = Math.floor(100000 + Math.random() * 900000).toString(); // 6-digit code
+
+    const code = "123456"; // Fixed code
     setVerificationCode(code);
     setCodeSent(true);
     toast.success(`Verification code sent to ${formData.email} (Code: ${code})`);
@@ -117,7 +119,65 @@ const SignUp = () => {
               </div>
             </div>
 
-            {/* Email Verification */}
+            {/* Age & Gender */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="space-y-2">
+                <Label htmlFor="age">Age</Label>
+                <Input
+                  id="age"
+                  type="number"
+                  value={formData.age}
+                  onChange={(e) => handleInputChange("age", e.target.value)}
+                  required
+                />
+              </div>
+              <div className="space-y-2">
+                <Label>Gender</Label>
+                <Select onValueChange={(value) => handleInputChange("gender", value)}>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Select gender" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="male">Male</SelectItem>
+                    <SelectItem value="female">Female</SelectItem>
+                    <SelectItem value="other">Other</SelectItem>
+                    <SelectItem value="prefer-not-to-say">Prefer not to say</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+            </div>
+
+            {/* Location & Qualification */}
+            <div className="space-y-2">
+              <Label htmlFor="location">Location</Label>
+              <Input
+                id="location"
+                value={formData.location}
+                onChange={(e) => handleInputChange("location", e.target.value)}
+                placeholder="City, Country"
+                required
+              />
+            </div>
+
+            <div className="space-y-2">
+              <Label>Highest Academic Qualification</Label>
+              <Select onValueChange={(value) => handleInputChange("qualification", value)}>
+                <SelectTrigger>
+                  <SelectValue placeholder="Select qualification" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="matric">Matric/Grade 12</SelectItem>
+                  <SelectItem value="diploma">Diploma</SelectItem>
+                  <SelectItem value="bachelors">Bachelor's Degree</SelectItem>
+                  <SelectItem value="honours">Honours Degree</SelectItem>
+                  <SelectItem value="masters">Master's Degree</SelectItem>
+                  <SelectItem value="phd">PhD/Doctorate</SelectItem>
+                  <SelectItem value="other">Other</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+
+            {/* Email & Verification */}
             <div className="space-y-2">
               <Label htmlFor="email">Email Address</Label>
               <div className="flex gap-2">
@@ -153,7 +213,7 @@ const SignUp = () => {
               </div>
             )}
 
-            {/* Password field only shows after email verification */}
+            {/* Password (only shows after verification) */}
             {isEmailVerified && (
               <div className="space-y-2">
                 <Label htmlFor="password">Password</Label>
