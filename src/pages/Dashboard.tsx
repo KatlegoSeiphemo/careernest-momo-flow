@@ -6,9 +6,6 @@ import { MessageCircle, FileText, Target, LogOut, Users, Trophy, MapPin, BookOpe
 const Dashboard = () => {
   const navigate = useNavigate();
 
-  // Retrieve user name from localStorage
-  const userName = localStorage.getItem("name") || "User";
-
   const features = [
     { icon: MessageCircle, title: "Career Chatbot", description: "Get instant answers to your career questions", path: "/chatbot", color: "bg-blue-500" },
     { icon: FileText, title: "CV Generator", description: "Create professional CVs and Cover Letters with AI assistance", path: "/cv-generator", color: "bg-green-500" },
@@ -26,9 +23,6 @@ const Dashboard = () => {
     { value: "100+", label: "Communities", change: "+25% this month", color: "text-green-500" },
     { value: "98%", label: "Success Rate", change: "+2% improvement", color: "text-blue-500" }
   ];
-
-  // Motivational quote (you can rotate multiple quotes if desired)
-  const motivationalQuote = "“Your career is your masterpiece. Keep creating it every day.”";
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 scroll-smooth">
@@ -53,9 +47,7 @@ const Dashboard = () => {
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12">
         {/* Hero */}
         <div className="text-center space-y-4">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900">
-            Welcome, {userName}!
-          </h2>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900">Welcome to CareerNest</h2>
           <p className="text-xl md:text-2xl text-gray-600">
             Explore AI-powered tools and platform features to accelerate your career growth.
           </p>
@@ -97,18 +89,8 @@ const Dashboard = () => {
             </Card>
           ))}
         </div>
-
-        {/* Motivational Quote */}
-        <div className="text-center mt-12">
-          <p className="text-lg md:text-xl text-gray-700 italic">{motivationalQuote}</p>
-        </div>
       </main>
     </div>
-  );
-};
-
-export default Dashboard;
-
   );
 };
 
