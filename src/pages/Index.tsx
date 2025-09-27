@@ -21,51 +21,51 @@ const Index = () => {
   const features = [
     {
       icon: CreditCard,
-      title: "Subscription Payments",
-      description: "Students subscribe to Career Growth Bundles with affordable monthly plans",
-      pricing: "Starting from R50/month"
+      title: "Career Chatbot",
+      description: "Get instant career guidance, resume tips, and job search advice from our AI-powered Career Chatbot",
+      
     },
     {
       icon: Users,
-      title: "Split Payments",
-      description: "Instant commission distribution between students, CareerNest, and mentors",
-      pricing: "Transparent 10% platform fee"
+      title: "Mentorship Programme",
+      description: "Connect with experienced industry professionals for personalized guidance, career growth, and skill development.",
+      
     },
     {
       icon: Heart,
-      title: "Scholarship Crowdfunding",
-      description: "Community-powered funding for learners' educational goals",
-      pricing: "0% fees on donations"
+      title: "CV Generator",
+      description: "Track your progress, earn points, and unlock rewards as you achieve career milestones.",
+  
     },
     {
       icon: Briefcase,
-      title: "Job Application Services",
-      description: "CV scoring, psychometric tests, and mock interviews",
-      pricing: "R15-50 per service"
+      title: "Job Hub",
+      description: "Discover and apply to your dream job opportunities with tailored listings and career support",
+     
     },
     {
       icon: GraduationCap,
-      title: "Pay-As-You-Learn",
+      title: "Career Assessment",
       description: "Unlock lessons progressively without large upfront costs",
-      pricing: "R10-25 per lesson"
+      
     },
     {
       icon: Wallet,
-      title: "Employer Payments",
-      description: "Streamlined recruitment fee processing and candidate rewards",
-      pricing: "Custom enterprise rates"
+      title: "Communities",
+      description: "Connect with like-minded professionals, share insights, and grow together",
+      
     },
     {
       icon: Target,
-      title: "Savings & Goals",
-      description: "Gamified savings system for educational investments",
-      pricing: "Free goal tracking"
+      title: "Cover letter Generator",
+      description: "Create personalized, professional cover letters in minutes with AI assistance",
+     
     },
     {
       icon: Gift,
-      title: "Referral Rewards",
-      description: "Instant cash rewards for successful referrals",
-      pricing: "R25-100 per referral"
+      title: "Rewards Hub",
+      description: "Track your progress, earn points, and unlock rewards as you achieve career milestones.",
+     
     },
    
   ];
