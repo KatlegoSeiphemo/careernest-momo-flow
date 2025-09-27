@@ -44,6 +44,15 @@ const Dashboard = () => {
           <div className="flex justify-between items-center h-16">
             <h1 className="text-3xl font-extrabold text-primary tracking-wide">CareerNest</h1>
             <div className="flex items-center space-x-4">
+              {/* Apply to be a Mentor Button */}
+              <Button
+                variant="secondary"
+                onClick={() => navigate("/apply-mentor")}
+              >
+                Apply to be a Mentor
+              </Button>
+
+              {/* Sign Out Button */}
               <Button variant="outline" onClick={() => navigate("/")}>
                 <LogOut className="w-4 h-4 mr-2" /> Sign Out
               </Button>
