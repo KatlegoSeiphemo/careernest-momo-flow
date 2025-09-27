@@ -10,11 +10,11 @@ const Dashboard = () => {
   const features = [
     { icon: MessageCircle, title: "Career Chatbot", description: "Get instant answers to your career questions", path: "/chatbot", color: "bg-blue-500" },
     { icon: FileText, title: "CV Generator", description: "Create professional CVs and Cover Letters with AI assistance", path: "/cv-generator", color: "bg-green-500" },
-    { icon: Target, title: "Career Assessment", description: "Discover your ideal career path", path: "/career-assessment", color: "bg-orange-500" },
+    { icon: Target, title: "Career Assessment and Pathways", description: "Explore our Career Assessment to get personalised guidance and explore our detailed career roadmaps", path: "/career-assessment", color: "bg-orange-500" },
     { icon: MapPin, title: "Career Pathways", description: "Explore detailed career roadmaps", path: "/career-pathways", color: "bg-gradient-to-r from-blue-400 to-indigo-600" },
     { icon: BookOpen, title: "Mentorship", description: "Connect with industry experts", path: "/mentorship", color: "bg-gradient-to-r from-purple-500 to-pink-500" },
     { icon: Briefcase, title: "Job Hub", description: "Find your dream job opportunities", path: "/job-hub", color: "bg-gradient-to-r from-green-400 to-teal-500" },
-    { icon: Users, title: "Communities", description: "Join career-focused communities", path: "/communities", color: "bg-teal-500" },
+    { icon: Users, title: "Communities and Mentorship programs ", description: "Join career-focused communities and connect with industry professionals for life changing sessions", path: "/communities", color: "bg-teal-500" },
     { icon: Trophy, title: "Rewards Hub", description: "Track your progress and earn rewards", path: "/rewards", color: "bg-indigo-500" }
   ];
 
