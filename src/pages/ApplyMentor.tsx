@@ -14,6 +14,9 @@ const ApplyMentor = () => {
     experience: "",
     skills: "",
     motivation: "",
+    linkedin: "",
+    twitter: "",
+    github: "",
   });
 
   const handleChange = (field: string, value: string) => {
@@ -22,7 +25,9 @@ const ApplyMentor = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("Application submitted! We will contact you soon.");
+    toast.success(
+      "Application submitted! You will be updated via email regarding the status of your application."
+    );
     navigate("/dashboard");
   };
 
@@ -34,6 +39,7 @@ const ApplyMentor = () => {
         </CardHeader>
         <CardContent>
           <form onSubmit={handleSubmit} className="space-y-4">
+            {/* Basic Information */}
             <div className="space-y-2">
               <Label htmlFor="fullName">Full Name</Label>
               <Input
@@ -53,6 +59,8 @@ const ApplyMentor = () => {
                 required
               />
             </div>
+
+            {/* Experience & Skills */}
             <div className="space-y-2">
               <Label htmlFor="experience">Experience</Label>
               <Input
@@ -73,6 +81,8 @@ const ApplyMentor = () => {
                 required
               />
             </div>
+
+            {/* Motivation */}
             <div className="space-y-2">
               <Label htmlFor="motivation">Why do you want to be a mentor?</Label>
               <Input
@@ -83,6 +93,36 @@ const ApplyMentor = () => {
               />
             </div>
 
+            {/* Social Media Links */}
+            <div className="space-y-2">
+              <Label htmlFor="linkedin">LinkedIn</Label>
+              <Input
+                id="linkedin"
+                placeholder="https://www.linkedin.com/in/yourprofile"
+                value={formData.linkedin}
+                onChange={(e) => handleChange("linkedin", e.target.value)}
+              />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="twitter">Twitter</Label>
+              <Input
+                id="twitter"
+                placeholder="https://twitter.com/yourhandle"
+                value={formData.twitter}
+                onChange={(e) => handleChange("twitter", e.target.value)}
+              />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="github">GitHub</Label>
+              <Input
+                id="github"
+                placeholder="https://github.com/yourusername"
+                value={formData.github}
+                onChange={(e) => handleChange("github", e.target.value)}
+              />
+            </div>
+
+            {/* Submit Button */}
             <Button type="submit" className="w-full" size="lg">
               Submit Application
             </Button>
