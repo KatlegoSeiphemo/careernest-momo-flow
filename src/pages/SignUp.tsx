@@ -20,12 +20,38 @@ const SignUp = () => {
     password: ""
   });
 
+  const [passwordError, setPasswordError] = useState("");
+
   const handleInputChange = (field: string, value: string) => {
     setFormData(prev => ({ ...prev, [field]: value }));
+
+    // Live password validation
+    if (field === "password") {
+      if (!isStrongPassword(value)) {
+        setPasswordError(
+          "Password must be at least 8 characters long, include uppercase, lowercase, number, and special character."
+        );
+      } else {
+        setPasswordError("");
+      }
+    }
+  };
+
+  const isStrongPassword = (password: string) => {
+    const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]).{8,}$/;
+    return regex.test(password);
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (!isStrongPassword(formData.password)) {
+      toast.error(
+        "Password must be at least 8 characters long, include uppercase, lowercase, number, and special character."
+      );
+      return;
+    }
+
     // For now, just navigate to dashboard - will need Supabase for real auth
     toast.success("Account created successfully!");
     navigate("/dashboard");
@@ -139,6 +165,9 @@ const SignUp = () => {
                 onChange={(e) => handleInputChange("password", e.target.value)}
                 required
               />
+              {passwordError && (
+                <p className="text-sm text-red-600">{passwordError}</p>
+              )}
             </div>
 
             <Button type="submit" className="w-full" size="lg">
