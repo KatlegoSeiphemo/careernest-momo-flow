@@ -25,6 +25,7 @@ const SignUp = () => {
   const [verificationCode, setVerificationCode] = useState("");
   const [enteredCode, setEnteredCode] = useState("");
   const [codeSent, setCodeSent] = useState(false);
+  const [agreedToTerms, setAgreedToTerms] = useState(false);
 
   const handleInputChange = (field: string, value: string) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
@@ -72,6 +73,11 @@ const SignUp = () => {
 
     if (!isEmailVerified) {
       toast.error("Please verify your email first.");
+      return;
+    }
+
+    if (!agreedToTerms) {
+      toast.error("You must agree to the Terms & Conditions to continue.");
       return;
     }
 
@@ -228,7 +234,27 @@ const SignUp = () => {
               </div>
             )}
 
-            <Button type="submit" className="w-full" size="lg" disabled={!isEmailVerified}>
+            {/* Terms & Conditions */}
+            <div className="flex items-start gap-2">
+              <input
+                id="terms"
+                type="checkbox"
+                checked={agreedToTerms}
+                onChange={(e) => setAgreedToTerms(e.target.checked)}
+                className="mt-1"
+              />
+              <label htmlFor="terms" className="text-sm text-muted-foreground">
+                I agree to the{" "}
+                <span className="text-primary underline cursor-pointer">Terms & Conditions</span>
+              </label>
+            </div>
+
+            <Button
+              type="submit"
+              className="w-full"
+              size="lg"
+              disabled={!isEmailVerified || !agreedToTerms}
+            >
               Create Account
             </Button>
 
@@ -249,3 +275,4 @@ const SignUp = () => {
 };
 
 export default SignUp;
+
