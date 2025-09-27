@@ -1,7 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"; // ✅ Added from Mentorship
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { useNavigate } from "react-router-dom";
 import { 
   Users, 
@@ -11,13 +11,8 @@ import {
   Camera, 
   Music, 
   ArrowLeft, 
-  Star, 
-  Award, 
-  Calendar, 
-  MessageCircle, 
-  Video, 
-  CheckCircle 
-} from "lucide-react"; // ✅ Added full icon set from Mentorship
+  Star 
+} from "lucide-react";
 
 const Communities = () => {
   const navigate = useNavigate();
@@ -88,6 +83,30 @@ const Communities = () => {
       color: "bg-teal-500",
       posts: 267,
       isJoined: true
+    }
+  ];
+
+  const mentors = [
+    {
+      id: 1,
+      name: "Sarah Johnson",
+      role: "Senior Software Engineer",
+      expertise: "Full Stack Development",
+      image: "https://randomuser.me/api/portraits/women/44.jpg"
+    },
+    {
+      id: 2,
+      name: "Michael Chen",
+      role: "Healthcare Consultant",
+      expertise: "Public Health & Policy",
+      image: "https://randomuser.me/api/portraits/men/46.jpg"
+    },
+    {
+      id: 3,
+      name: "Aisha Mohammed",
+      role: "Business Strategist",
+      expertise: "Entrepreneurship & Leadership",
+      image: "https://randomuser.me/api/portraits/women/68.jpg"
     }
   ];
 
@@ -167,22 +186,21 @@ const Communities = () => {
           ))}
         </div>
 
-        {/* My Communities Section */}
-        <div className="mt-12">
-          <h3 className="text-2xl font-bold text-gray-900 mb-6">My Communities</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {communities.filter(c => c.isJoined).map((community) => (
-              <Card key={community.id} className="bg-white border-primary/20">
-                <CardContent className="p-4">
-                  <div className="flex items-center space-x-3">
-                    <div className={`p-2 rounded-lg ${community.color}`}>
-                      <community.icon className="w-5 h-5 text-white" />
-                    </div>
-                    <div>
-                      <h4 className="font-medium">{community.name}</h4>
-                      <p className="text-sm text-gray-500">{community.members} members</p>
-                    </div>
-                  </div>
+        {/* Featured Mentors Section */}
+        <div className="mt-16">
+          <h3 className="text-2xl font-bold text-gray-900 mb-6">Featured Mentors</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {mentors.map((mentor) => (
+              <Card key={mentor.id} className="hover:shadow-lg transition-shadow">
+                <CardContent className="p-6 text-center">
+                  <Avatar className="w-20 h-20 mx-auto mb-4">
+                    <AvatarImage src={mentor.image} alt={mentor.name} />
+                    <AvatarFallback>{mentor.name.charAt(0)}</AvatarFallback>
+                  </Avatar>
+                  <h4 className="text-lg font-semibold">{mentor.name}</h4>
+                  <p className="text-sm text-gray-500">{mentor.role}</p>
+                  <p className="text-xs text-gray-400 mb-4">{mentor.expertise}</p>
+                  <Button className="w-full">Connect</Button>
                 </CardContent>
               </Card>
             ))}
@@ -194,3 +212,4 @@ const Communities = () => {
 };
 
 export default Communities;
+
