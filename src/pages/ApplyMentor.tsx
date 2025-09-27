@@ -16,7 +16,7 @@ const ApplyMentor = () => {
     motivation: "",
     linkedin: "",
     twitter: "",
-    github: "",
+    
   });
 
   const handleChange = (field: string, value: string) => {
