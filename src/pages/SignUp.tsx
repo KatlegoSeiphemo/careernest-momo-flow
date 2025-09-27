@@ -6,6 +6,10 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
+import { createClient } from '@supabase/supabase-js';
+
+// Initialize Supabase
+const supabase = createClient('YOUR_SUPABASE_URL', 'YOUR_SUPABASE_ANON_KEY');
 
 const SignUp = () => {
   const navigate = useNavigate();
@@ -42,7 +46,7 @@ const SignUp = () => {
     return regex.test(password);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     if (!isStrongPassword(formData.password)) {
@@ -52,9 +56,29 @@ const SignUp = () => {
       return;
     }
 
-    // For now, just navigate to dashboard - will need Supabase for real auth
-    toast.success("Account created successfully!");
-    navigate("/dashboard");
+    // Sign up using Supabase with email verification
+    const { data, error } = await supabase.auth.signUp({
+      email: formData.email,
+      password: formData.password,
+      options: {
+        data: {
+          name: formData.name,
+          surname: formData.surname,
+          age: formData.age,
+          gender: formData.gender,
+          location: formData.location,
+          qualification: formData.qualification,
+        },
+        emailRedirectTo: 'https://yourapp.com/verify-email' // Redirect after verification
+      }
+    });
+
+    if (error) {
+      toast.error(error.message);
+    } else {
+      toast.success("Account created! Please check your email to verify your account.");
+      navigate("/signin");
+    }
   };
 
   return (
